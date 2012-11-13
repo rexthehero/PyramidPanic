@@ -36,5 +36,10 @@ namespace PyramidPanic
         {
             spriteBatch.Draw(this.texture, this.rectangle, Color.White);
         }
+
+        public void Draw(SpriteBatch spriteBatch, Color color)
+        {
+            spriteBatch.Draw(this.texture, this.rectangle, color);
+        }
     }
 }
