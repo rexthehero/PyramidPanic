@@ -66,6 +66,26 @@ namespace PyramidPanic
             {
                 this.game.GameState = new LoadScene(this.game);
             }
+
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Help)
+            {
+                this.game.GameState = new HelpScene(this.game);
+            }
+
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Score)
+            {
+                this.game.GameState = new ScoreScene(this.game);
+            }
+
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Quit)
+            {
+                this.game.GameState = new QuitScene(this.game);
+            }
+
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.LevelEditor)
+            {
+                this.game.GameState = new LevelEditorScene(this.game);
+            }
         }
 
         //LoadContent 
