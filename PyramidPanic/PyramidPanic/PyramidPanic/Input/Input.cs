@@ -16,10 +16,12 @@ namespace PyramidPanic
         //Fields
         private static KeyboardState ks, oks;
         private static MouseState ms, oms;
+        private static Rectangle mouseRectangle;
 
         //Constructor wordt eenmaal aangeroepen.
         static Input()
         {
+            mouseRectangle = new Rectangle(0, 0, 1, 1);
             ks = Keyboard.GetState();
             ms = Mouse.GetState();
             oks = ks;
@@ -53,9 +55,24 @@ namespace PyramidPanic
             return ( ms.LeftButton == ButtonState.Pressed && oms.LeftButton == ButtonState.Released );
         }
 
+        //Edgedetector voor een rechtklik van de muis
         public static bool MouseEdgeDetectPressRight()
         {
-            return (ms.LeftButton == ButtonState.Pressed && oms.LeftButton == ButtonState.Released);
+            return (ms.RightButton == ButtonState.Pressed && oms.RightButton == ButtonState.Released);
+        }
+
+        //Positie van de muis
+        public static Vector2 MousePosition()
+        {
+            return new Vector2(ms.X, ms.Y);
+        }
+
+        //Positie van de rectangle
+        public static Rectangle MouseRectangle()
+        {
+            mouseRectangle.X = ms.X;
+            mouseRectangle.Y = ms.Y;
+            return mouseRectangle;
         }
     }
 }
