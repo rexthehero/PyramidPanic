@@ -15,6 +15,8 @@ namespace PyramidPanic
     {
         //Fields
         private PyramidPanic game;
+        private Level level;
+        private int levelNumber = 0;
 
         //Constructor
         public PlayScene(PyramidPanic game)
@@ -32,7 +34,7 @@ namespace PyramidPanic
         //LoadContent
         public void LoadContent()
         {
-
+            this.level = new Level(this.game, this.levelNumber);
         }
 
         //Update
@@ -47,12 +49,14 @@ namespace PyramidPanic
             {
                 this.game.Exit();
             }
+            this.level.Update(gameTime);
         }
 
         //Draw
         public void Draw(GameTime gameTime)
         {
             this.game.GraphicsDevice.Clear(Color.Purple);
+            this.level.Draw(gameTime);
         }
     }
 }
