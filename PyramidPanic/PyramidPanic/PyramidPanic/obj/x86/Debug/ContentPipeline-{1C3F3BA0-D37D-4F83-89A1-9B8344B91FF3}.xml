@@ -100,6 +100,105 @@
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Scorpion.xnb</Output>
       <Time>2012-02-02T16:35:12.4692804+01:00</Time>
     </Item>
+    <Item>
+      <Source>PlaySceneAssets\Blocks\Wall1.png</Source>
+      <Name>PlaySceneAssets\Blocks\Wall1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Blocks\Wall1.xnb</Output>
+      <Time>2012-11-09T09:18:19.1961889+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Blocks\Wall2.png</Source>
+      <Name>PlaySceneAssets\Blocks\Wall2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Blocks\Wall2.xnb</Output>
+      <Time>2012-11-09T09:18:19.2111898+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Background\Background2.png</Source>
+      <Name>PlaySceneAssets\Background\Background2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Background\Background2.xnb</Output>
+      <Time>2012-11-09T09:18:18.725162+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Treasures\Treasure1.png</Source>
+      <Name>PlaySceneAssets\Treasures\Treasure1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Treasures\Treasure1.xnb</Output>
+      <Time>2012-11-09T09:18:19.1651872+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Treasures\Treasure2.png</Source>
+      <Name>PlaySceneAssets\Treasures\Treasure2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Treasures\Treasure2.xnb</Output>
+      <Time>2012-11-09T09:18:19.180188+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Treasures\Potion.png</Source>
+      <Name>PlaySceneAssets\Treasures\Potion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Treasures\Potion.xnb</Output>
+      <Time>2012-11-09T09:18:19.0701817+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Treasures\Scarab.png</Source>
+      <Name>PlaySceneAssets\Treasures\Scarab</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Treasures\Scarab.xnb</Output>
+      <Time>2012-11-09T09:18:19.1031836+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Blocks\Door.png</Source>
+      <Name>PlaySceneAssets\Blocks\Door</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Blocks\Door.xnb</Output>
+      <Time>2012-11-09T09:18:18.9101726+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Panel\Panel.png</Source>
+      <Name>PlaySceneAssets\Panel\Panel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Panel\Panel.xnb</Output>
+      <Time>2012-11-09T09:18:19.0551809+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Panel\Lives.png</Source>
+      <Name>PlaySceneAssets\Panel\Lives</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Panel\Lives.xnb</Output>
+      <Time>2012-11-09T09:18:19.0071781+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Fonts\Arial.spritefont</Source>
+      <Name>PlaySceneAssets\Fonts\Arial</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Fonts\Arial.xnb</Output>
+      <Time>2012-11-23T11:02:18.0922266+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{1C3F3BA0-D37D-4F83-89A1-9B8344B91FF3}</ContentProjectGUID>

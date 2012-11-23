@@ -38,9 +38,9 @@ namespace PyramidPanic
         }
 
         //Draw
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(GameTime gameTime)
         {
-            spriteBatch.Draw(this.texture, this.rectangle, Color.White);
+            this.game.SpriteBatch.Draw(this.texture, this.rectangle, Color.White);
         }
 
         public void Draw(SpriteBatch spriteBatch, Color color)

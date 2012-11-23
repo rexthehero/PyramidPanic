@@ -55,7 +55,7 @@ namespace PyramidPanic
         //Draw
         public void Draw(GameTime gameTime)
         {
-            this.game.GraphicsDevice.Clear(Color.Purple);
+            this.game.GraphicsDevice.Clear(Color.White);
             this.level.Draw(gameTime);
         }
     }
