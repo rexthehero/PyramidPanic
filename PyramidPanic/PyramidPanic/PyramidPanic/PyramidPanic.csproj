@@ -96,6 +96,7 @@
     <Compile Include="GameScenes\StartScene\StartScene.cs" />
     <Compile Include="GameScenes\ScoreScene\ScoreScene.cs" />
     <Compile Include="GameScenes\QuitScene\QuitScene.cs" />
+    <Compile Include="Scorpion.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="pyramid.ico" />

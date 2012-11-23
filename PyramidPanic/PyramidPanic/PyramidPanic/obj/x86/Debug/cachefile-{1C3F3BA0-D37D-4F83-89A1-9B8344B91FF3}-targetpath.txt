@@ -8,5 +8,6 @@ Content\StartSceneAssets\Button_scores.xnb
 Content\StartSceneAssets\Button_start.xnb
 Content\PlaySceneAssets\Blocks\Block.xnb
 Content\PlaySceneAssets\Blocks\Transparant.xnb
+Content\PlaySceneAssets\Scorpion.xnb
 Content\PlaySceneAssets\Levels\0.txt
 Content\PlaySceneAssets\Levels\1.txt
