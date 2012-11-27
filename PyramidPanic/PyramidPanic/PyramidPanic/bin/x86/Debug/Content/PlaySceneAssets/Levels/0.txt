@@ -4,7 +4,7 @@ xcccccccccccccc....x
 w.....dddddddd.....y
 y...aaaa..aaa......z
 x...ywwywyw........x
-w..ddd.............y
+w........s.........y
 w....wwwwww.ccc....w
 x.bbbbbbb..........x
 y..ddd......bbbb...w

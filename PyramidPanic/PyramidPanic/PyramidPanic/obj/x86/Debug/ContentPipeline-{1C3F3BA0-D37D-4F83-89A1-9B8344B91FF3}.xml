@@ -190,6 +190,15 @@
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Fonts\Arial.xnb</Output>
       <Time>2012-11-23T11:39:49.8657509+01:00</Time>
     </Item>
+    <Item>
+      <Source>PlaySceneAssets\Scorpion\Scorpion.png</Source>
+      <Name>PlaySceneAssets\Scorpion\Scorpion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Scorpion\Scorpion.xnb</Output>
+      <Time>2012-11-09T09:18:19.1181845+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{1C3F3BA0-D37D-4F83-89A1-9B8344B91FF3}</ContentProjectGUID>
