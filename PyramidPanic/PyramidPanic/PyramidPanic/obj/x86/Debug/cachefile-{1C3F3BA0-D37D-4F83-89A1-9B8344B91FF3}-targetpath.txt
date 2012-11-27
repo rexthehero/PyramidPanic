@@ -8,7 +8,6 @@ Content\StartSceneAssets\Button_scores.xnb
 Content\StartSceneAssets\Button_start.xnb
 Content\PlaySceneAssets\Blocks\Block.xnb
 Content\PlaySceneAssets\Blocks\Transparant.xnb
-Content\PlaySceneAssets\Scorpion.xnb
 Content\PlaySceneAssets\Blocks\Wall1.xnb
 Content\PlaySceneAssets\Blocks\Wall2.xnb
 Content\PlaySceneAssets\Background\Background2.xnb

@@ -92,15 +92,6 @@
       <Time>2012-11-09T09:18:19.1501863+01:00</Time>
     </Item>
     <Item>
-      <Source>PlaySceneAssets\Scorpion.png</Source>
-      <Name>PlaySceneAssets\Scorpion</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Scorpion.xnb</Output>
-      <Time>2012-02-02T16:35:12.4692804+01:00</Time>
-    </Item>
-    <Item>
       <Source>PlaySceneAssets\Blocks\Wall1.png</Source>
       <Name>PlaySceneAssets\Blocks\Wall1</Name>
       <Importer>TextureImporter</Importer>

@@ -22,7 +22,6 @@ namespace PyramidPanic
         private Block[,] blocks;
         private const int GRIDWIDTH = 32;
         private const int GRIDHEIGHT = 32;
-        private Scorpion scorpion;
         private Image background;
         private List<Image> treasures;
         private Panel panel;
@@ -31,7 +30,7 @@ namespace PyramidPanic
         public Level(PyramidPanic game, int levelIndex)
         {
             this.game = game;
-            this.levelPath = @"Content\PlaySceneAssets\Levels\2.txt";
+            this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
             this.LoadAssets();
         }
 
@@ -91,9 +90,6 @@ namespace PyramidPanic
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, '@');
                 case '.':
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');
-                case 's':
-                    this.scorpion =  new Scorpion(this.game, @"PlaySceneAssets\Scorpion", new Vector2(x,y));
-                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');
                 default:
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');
             }
@@ -101,8 +97,6 @@ namespace PyramidPanic
 
         public void Update(GameTime gameTime)
         {
-            if ( this.scorpion != null)
-            this.scorpion.Update(gameTime);
         }
 
         public void Draw(GameTime gameTime)
@@ -122,9 +116,6 @@ namespace PyramidPanic
             {
                 treasure.Draw(gameTime);
             }
-
-            if ( this.scorpion != null )
-            this.scorpion.Draw(gameTime);
         }
     }
 }

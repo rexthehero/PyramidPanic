@@ -101,13 +101,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlaySceneAssets\Scorpion.png">
-      <Name>Scorpion</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="PlaySceneAssets\Blocks\Wall1.png">
       <Name>Wall1</Name>
       <Importer>TextureImporter</Importer>
