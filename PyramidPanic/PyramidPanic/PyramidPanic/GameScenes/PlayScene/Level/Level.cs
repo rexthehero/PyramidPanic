@@ -31,7 +31,7 @@ namespace PyramidPanic
         public Level(PyramidPanic game, int levelIndex)
         {
             this.game = game;
-            this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+            this.levelPath = @"Content\PlaySceneAssets\Levels\2.txt";
             this.LoadAssets();
         }
 

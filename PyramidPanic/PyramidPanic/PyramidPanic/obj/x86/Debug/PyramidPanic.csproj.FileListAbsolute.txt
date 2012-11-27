@@ -28,3 +28,4 @@ C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\Pyram
 C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Panel\Panel.xnb
 C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Panel\Lives.xnb
 C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Fonts\Arial.xnb
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Levels\2.txt

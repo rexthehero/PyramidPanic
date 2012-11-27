@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Blocks\Wall1.xnb</Output>
-      <Time>2012-11-09T09:18:19.1961889+01:00</Time>
+      <Time>2012-11-23T11:39:49.8657509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Blocks\Wall2.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Blocks\Wall2.xnb</Output>
-      <Time>2012-11-09T09:18:19.2111898+01:00</Time>
+      <Time>2012-11-23T11:39:49.8657509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Background\Background2.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Background\Background2.xnb</Output>
-      <Time>2012-11-09T09:18:18.725162+01:00</Time>
+      <Time>2012-11-23T11:39:49.8657509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Treasures\Treasure1.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Treasures\Treasure1.xnb</Output>
-      <Time>2012-11-09T09:18:19.1651872+01:00</Time>
+      <Time>2012-11-23T11:39:49.8813509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Treasures\Treasure2.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Treasures\Treasure2.xnb</Output>
-      <Time>2012-11-09T09:18:19.180188+01:00</Time>
+      <Time>2012-11-23T11:39:49.8813509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Treasures\Potion.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Treasures\Potion.xnb</Output>
-      <Time>2012-11-09T09:18:19.0701817+01:00</Time>
+      <Time>2012-11-23T11:39:49.8813509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Treasures\Scarab.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Treasures\Scarab.xnb</Output>
-      <Time>2012-11-09T09:18:19.1031836+01:00</Time>
+      <Time>2012-11-23T11:39:49.8813509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Blocks\Door.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Blocks\Door.xnb</Output>
-      <Time>2012-11-09T09:18:18.9101726+01:00</Time>
+      <Time>2012-11-23T11:39:49.8657509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Panel\Panel.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Panel\Panel.xnb</Output>
-      <Time>2012-11-09T09:18:19.0551809+01:00</Time>
+      <Time>2012-11-23T11:39:49.8813509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Panel\Lives.png</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Panel\Lives.xnb</Output>
-      <Time>2012-11-09T09:18:19.0071781+01:00</Time>
+      <Time>2012-11-23T11:39:49.8813509+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Fonts\Arial.spritefont</Source>
@@ -197,7 +197,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\AM1A\Blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Fonts\Arial.xnb</Output>
-      <Time>2012-11-23T11:02:18.0922266+01:00</Time>
+      <Time>2012-11-23T11:39:49.8657509+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
