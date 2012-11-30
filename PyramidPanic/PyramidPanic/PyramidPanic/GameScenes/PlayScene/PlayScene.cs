@@ -16,7 +16,7 @@ namespace PyramidPanic
         //Fields
         private PyramidPanic game;
         private Level level;
-        private int levelNumber = 0;
+        private int levelNumber = 2;
 
         //Constructor
         public PlayScene(PyramidPanic game)
@@ -40,7 +40,7 @@ namespace PyramidPanic
         //Update
         public void Update(GameTime gameTime)
         {
-            if (Input.EdgeDetectKeyDown(Keys.Escape))
+            if (Input.EdgeDetectKeyDown(Keys.Escape) || Input.EdgeDetectButtonDown(Buttons.B))
             {
                 this.game.GameState = new StartScene(this.game);
             }

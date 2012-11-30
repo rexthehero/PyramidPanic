@@ -22,16 +22,34 @@ namespace PyramidPanic
         private Block[,] blocks;
         private const int GRIDWIDTH = 32;
         private const int GRIDHEIGHT = 32;
-        private Scorpion scorpion;
         private Image background;
         private List<Image> treasures;
         private Panel panel;
+        private Scorpion scorpion;
+        private Stream stream;
 
         //Constructor
         public Level(PyramidPanic game, int levelIndex)
         {
             this.game = game;
+            /*
+            System.IO.Stream stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\0.txt");
+            System.IO.StreamReader sreader = new System.IO.StreamReader(stream);
+            // use StreamReader.ReadLine or other methods to read the file data
+
+            Console.WriteLine("File Size: " + stream.Length);
+            stream.Close();
+            */
+            this.stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\0.txt");
             this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+
+            //eeee
+            //IAsyncResult result = StorageDevice.BeginShowSelector(
+            //        PlayerIndex.One, null, null);
+            //StorageDevice device = StorageDevice.EndShowSelector(result);
+            //device.BeginOpenContainer.
+
+            //eeeee
             this.LoadAssets();
         }
 
@@ -40,7 +58,8 @@ namespace PyramidPanic
             this.treasures = new List<Image>();
             this.panel = new Panel(this.game, new Vector2(0f, 448f));
             this.lines = new List<string>();
-            StreamReader reader = new StreamReader(this.levelPath);
+            //StreamReader reader = new StreamReader(this.levelPath);
+            StreamReader reader = new StreamReader(this.stream);
             string line = reader.ReadLine();
             int width = line.Length;
             while ( line != null)
@@ -51,6 +70,7 @@ namespace PyramidPanic
             int height = lines.Count;
             this.blocks = new Block[width, height];
             reader.Close();
+            this.stream.Close();
 
             for (int row = 0; row < height; row++)
             {
@@ -78,6 +98,9 @@ namespace PyramidPanic
                 case 'd':
                     this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'd');
+                case 's':
+                    this.scorpion = new Scorpion(this.game, new Vector2(x, y), 2.0f);
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 's');
                 case 'w':
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, 'w');
                 case 'x':
@@ -91,20 +114,18 @@ namespace PyramidPanic
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, '@');
                 case '.':
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');
-                case 's':
-                    this.scorpion =  new Scorpion(this.game, @"PlaySceneAssets\Scorpion", new Vector2(x,y));
-                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');
                 default:
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');
             }
         }
 
+        //Update method
         public void Update(GameTime gameTime)
         {
-            if ( this.scorpion != null)
             this.scorpion.Update(gameTime);
         }
 
+        //Draw method
         public void Draw(GameTime gameTime)
         {
             this.background.Draw(gameTime);
@@ -123,7 +144,7 @@ namespace PyramidPanic
                 treasure.Draw(gameTime);
             }
 
-            if ( this.scorpion != null )
+            //if ( this.scorpion != null )
             this.scorpion.Draw(gameTime);
         }
     }
