@@ -17,6 +17,7 @@ namespace PyramidPanic
         private static KeyboardState ks, oks;
         private static MouseState ms, oms;
         private static Rectangle mouseRectangle;
+        private static GamePadState gps, ogps;
 
         //Constructor wordt eenmaal aangeroepen.
         static Input()
@@ -24,8 +25,10 @@ namespace PyramidPanic
             mouseRectangle = new Rectangle(0, 0, 1, 1);
             ks = Keyboard.GetState();
             ms = Mouse.GetState();
+            gps = GamePad.GetState(PlayerIndex.One);
             oks = ks;
             oms = ms;
+            ogps = gps;
         }
 
         //Update methode
@@ -33,10 +36,19 @@ namespace PyramidPanic
         {
             oks = ks;
             oms = ms;
+            ogps = gps;
             ks = Keyboard.GetState();
             ms = Mouse.GetState();
+            gps = GamePad.GetState(PlayerIndex.One);
         }
 
+        
+        //EdgeDetector  gamepad
+        public static bool EdgeDetectButtonDown(Buttons button)
+        {
+            return ogps.IsButtonUp(button) && gps.IsButtonDown(button);
+        }
+        
         //LevelDetecter voor de toetsenknoppen
         public static bool DetectKeyDown(Keys key)
         {

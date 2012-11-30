@@ -52,7 +52,7 @@ namespace PyramidPanic
                                        new Rectangle(this.xValue[this.i], 0, 32, 32),
                                        Color.White,
                                        0f,
-                                       new Vector2(16f,16f),
+                                       new Vector2(16f, 16f),
                                        SpriteEffects.None,
                                        0f);
         }

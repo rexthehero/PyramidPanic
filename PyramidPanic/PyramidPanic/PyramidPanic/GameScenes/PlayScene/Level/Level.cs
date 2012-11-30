@@ -26,12 +26,30 @@ namespace PyramidPanic
         private List<Image> treasures;
         private Panel panel;
         private Scorpion scorpion;
+        private Stream stream;
 
         //Constructor
         public Level(PyramidPanic game, int levelIndex)
         {
             this.game = game;
+            /*
+            System.IO.Stream stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\0.txt");
+            System.IO.StreamReader sreader = new System.IO.StreamReader(stream);
+            // use StreamReader.ReadLine or other methods to read the file data
+
+            Console.WriteLine("File Size: " + stream.Length);
+            stream.Close();
+            */
+            this.stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\0.txt");
             this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+
+            //eeee
+            //IAsyncResult result = StorageDevice.BeginShowSelector(
+            //        PlayerIndex.One, null, null);
+            //StorageDevice device = StorageDevice.EndShowSelector(result);
+            //device.BeginOpenContainer.
+
+            //eeeee
             this.LoadAssets();
         }
 
@@ -40,7 +58,8 @@ namespace PyramidPanic
             this.treasures = new List<Image>();
             this.panel = new Panel(this.game, new Vector2(0f, 448f));
             this.lines = new List<string>();
-            StreamReader reader = new StreamReader(this.levelPath);
+            //StreamReader reader = new StreamReader(this.levelPath);
+            StreamReader reader = new StreamReader(this.stream);
             string line = reader.ReadLine();
             int width = line.Length;
             while ( line != null)
@@ -51,6 +70,7 @@ namespace PyramidPanic
             int height = lines.Count;
             this.blocks = new Block[width, height];
             reader.Close();
+            this.stream.Close();
 
             for (int row = 0; row < height; row++)
             {

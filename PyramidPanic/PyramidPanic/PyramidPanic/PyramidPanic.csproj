@@ -13,12 +13,11 @@
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
     <XnaPlatform>Windows</XnaPlatform>
-    <XnaProfile>Reach</XnaProfile>
+    <XnaProfile>HiDef</XnaProfile>
     <XnaCrossPlatformGroupID>81fe0ce9-7d2e-443c-928d-4ecba25871d4</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>pyramid.ico</ApplicationIcon>
-    <Thumbnail>
-    </Thumbnail>
+    <Thumbnail>XBOXLives.png</Thumbnail>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -103,12 +102,15 @@
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkRight.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Lives.png" />
     <Content Include="pyramid.ico" />
+    <Content Include="XBOXLives.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PyramidPanicContent\PyramidPanicContent.contentproj">
-      <Name>PyramidPanicContent</Name>
+      <Name>PyramidPanicContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{1C3F3BA0-D37D-4F83-89A1-9B8344B91FF3}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

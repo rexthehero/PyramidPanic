@@ -11,15 +11,15 @@ Content\PlaySceneAssets\Blocks\Transparant.xnb
 Content\PlaySceneAssets\Blocks\Wall1.xnb
 Content\PlaySceneAssets\Blocks\Wall2.xnb
 Content\PlaySceneAssets\Background\Background2.xnb
-Content\PlaySceneAssets\Treasures\Treasure1.xnb
 Content\PlaySceneAssets\Treasures\Treasure2.xnb
+Content\PlaySceneAssets\Treasures\Treasure1.xnb
 Content\PlaySceneAssets\Treasures\Potion.xnb
 Content\PlaySceneAssets\Treasures\Scarab.xnb
 Content\PlaySceneAssets\Blocks\Door.xnb
 Content\PlaySceneAssets\Panel\Panel.xnb
 Content\PlaySceneAssets\Panel\Lives.xnb
-Content\PlaySceneAssets\Fonts\Arial.xnb
 Content\PlaySceneAssets\Scorpion\Scorpion.xnb
+Content\PlaySceneAssets\Fonts\Arial.xnb
 Content\PlaySceneAssets\Levels\0.txt
 Content\PlaySceneAssets\Levels\1.txt
 Content\PlaySceneAssets\Levels\2.txt
