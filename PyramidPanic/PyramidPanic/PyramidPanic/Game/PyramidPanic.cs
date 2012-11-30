@@ -17,6 +17,7 @@ namespace PyramidPanic
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         private IStateGame gameState;
+        private RenderTarget2D renderTarget2D;
 
         //Properties
         public IStateGame GameState
@@ -40,6 +41,7 @@ namespace PyramidPanic
         protected override void Initialize()
         {
             this.IsMouseVisible = true;
+            Mouse.SetPosition
             this.Window.Title = "Pyramid Panic";
             this.graphics.PreferredBackBufferWidth = 640;
             this.graphics.PreferredBackBufferHeight = 480;
@@ -51,6 +53,12 @@ namespace PyramidPanic
         {
             this.spriteBatch = new SpriteBatch(GraphicsDevice);
             this.gameState = new StartScene(this);
+            this.renderTarget2D = new RenderTarget2D(GraphicsDevice,
+                                                     GraphicsDevice.PresentationParameters.BackBufferWidth,
+                                                     GraphicsDevice.PresentationParameters.BackBufferHeight,
+                                                     false,
+                                                     SurfaceFormat.Color,
+                                                     DepthFormat.None);
         }
 
         protected override void UnloadContent()
@@ -70,9 +78,26 @@ namespace PyramidPanic
 
         protected override void Draw(GameTime gameTime)
         {
+            this.GraphicsDevice.SetRenderTarget(this.renderTarget2D);
+
             this.GraphicsDevice.Clear(Color.CornflowerBlue);
             this.spriteBatch.Begin();
             this.gameState.Draw(gameTime);
+            this.spriteBatch.End();
+
+            this.GraphicsDevice.SetRenderTarget(null);
+            this.GraphicsDevice.Clear(Color.Black);
+
+            this.spriteBatch.Begin();
+            this.spriteBatch.Draw(this.renderTarget2D,
+                                  new Vector2(GraphicsDevice.PresentationParameters.BackBufferWidth/2, GraphicsDevice.PresentationParameters.BackBufferHeight/2),
+                                  null,
+                                  Color.White,
+                                  0f,
+                                  new Vector2(this.renderTarget2D.Width/2, this.renderTarget2D.Height/2),
+                                  0.8f,
+                                  SpriteEffects.None,
+                                  0f);                                      
             this.spriteBatch.End();
             base.Draw(gameTime);
         }
