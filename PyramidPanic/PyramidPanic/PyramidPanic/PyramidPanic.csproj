@@ -89,6 +89,7 @@
     <Compile Include="HelperClasses\Image.cs" />
     <Compile Include="GameScenes\StartScene\MenuStartScene.cs" />
     <Compile Include="GameScenes\HelpScene\HelpScene.cs" />
+    <Compile Include="IAnimatedSprite.cs" />
     <Compile Include="Input\Input.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />
