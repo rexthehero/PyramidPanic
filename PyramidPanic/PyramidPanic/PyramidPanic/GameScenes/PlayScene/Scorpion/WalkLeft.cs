@@ -27,7 +27,6 @@ namespace PyramidPanic
         public void Update(GameTime gameTime)
         {
             //De scorpion loopt naar rechts
-
             this.scorpion.Position -= new Vector2(this.scorpion.Speed, 0f);
             if (this.scorpion.Position.X < 32)
             {
