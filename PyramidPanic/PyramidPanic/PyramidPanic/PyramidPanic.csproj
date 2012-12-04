@@ -79,6 +79,11 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="GameScenes\Beetle\Beetle.cs" />
+    <Compile Include="GameScenes\Beetle\IBeetle.cs" />
+    <Compile Include="GameScenes\Beetle\WalkDown.cs" />
+    <Compile Include="GameScenes\Beetle\WalkUp.cs" />
     <Compile Include="GameScenes\PlayScene\Block\Block.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkLeft.cs" />
     <Compile Include="HelperClasses\Image.cs" />
