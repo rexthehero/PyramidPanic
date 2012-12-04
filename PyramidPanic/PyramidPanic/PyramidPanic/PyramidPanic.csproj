@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="GameScenes\Beetle\BeetleManager.cs" />
     <Compile Include="GameScenes\Beetle\Beetle.cs" />
     <Compile Include="GameScenes\Beetle\IBeetle.cs" />
     <Compile Include="GameScenes\Beetle\WalkDown.cs" />
@@ -89,7 +90,7 @@
     <Compile Include="HelperClasses\Image.cs" />
     <Compile Include="GameScenes\StartScene\MenuStartScene.cs" />
     <Compile Include="GameScenes\HelpScene\HelpScene.cs" />
-    <Compile Include="IAnimatedSprite.cs" />
+    <Compile Include="AnimatedSprite\IAnimatedSprite.cs" />
     <Compile Include="Input\Input.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />

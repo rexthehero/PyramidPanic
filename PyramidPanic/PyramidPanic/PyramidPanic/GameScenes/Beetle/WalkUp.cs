@@ -26,7 +26,7 @@ namespace PyramidPanic
         {
             //De scorpion loopt naar rechts
             this.beetle.Position -= new Vector2(0f, this.beetle.Speed);
-            if (this.beetle.Position.Y < 32)
+            if (this.beetle.Position.Y < this.beetle.Top)
             {
                this.beetle.State = new WalkDown(this.beetle);
             }

@@ -30,6 +30,17 @@ namespace PyramidPanic
         private List<Beetle> beetles;
         private Stream stream;
 
+        //Properties
+        public List<Beetle> Beetles
+        {
+            get { return this.beetles; }
+        }
+
+        public Block[,] Blocks
+        {
+            get { return this.blocks; }
+        }
+
         //Constructor
         public Level(PyramidPanic game, int levelIndex)
         {
@@ -84,6 +95,7 @@ namespace PyramidPanic
                     this.blocks[column, row] = LoadBlock(blockElement, column * GRIDWIDTH, row * GRIDHEIGHT);
                 }
             }
+            BeetleManager.Level = this;
         }
 
         private Block LoadBlock(char blockElement, int x, int y)

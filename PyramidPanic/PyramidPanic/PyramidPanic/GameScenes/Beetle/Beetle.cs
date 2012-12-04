@@ -20,9 +20,22 @@ namespace PyramidPanic
         private Rectangle rectangle;
         private IBeetle state;
         private float speed;
+        private float top, bottom;
        
 
         //Properties
+        public float Top
+        {
+            set { this.top = value; }
+            get { return this.top; }
+        }
+
+        public float Bottom
+        {
+            get { return this.bottom; }
+            set { this.bottom = value; }
+        }
+
         public float Speed
         {
             get { return this.speed; }
@@ -69,7 +82,7 @@ namespace PyramidPanic
             this.position = position;
             this.speed = speed;
             this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width/4, this.texture.Height);
-            this.state = new WalkUp(this);
+            this.state = new WalkDown(this);
         }
 
         //Update
