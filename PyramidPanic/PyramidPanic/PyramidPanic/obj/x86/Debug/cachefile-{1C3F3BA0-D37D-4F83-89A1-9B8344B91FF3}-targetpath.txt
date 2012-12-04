@@ -20,6 +20,16 @@ Content\PlaySceneAssets\Panel\Panel.xnb
 Content\PlaySceneAssets\Panel\Lives.xnb
 Content\PlaySceneAssets\Scorpion\Scorpion.xnb
 Content\PlaySceneAssets\Fonts\Arial.xnb
+Content\Effects\BloomCombine.xnb
+Content\Effects\BloomExtract.xnb
+Content\Effects\GaussianBlur.xnb
+Content\Effects\engine_diff_tex.xnb
+Content\Effects\turret_alt_diff_tex.xnb
+Content\Effects\sunset.xnb
+Content\Effects\hudFont.xnb
+Content\Effects\tank.xnb
+Content\Effects\engine_diff_tex_0.xnb
+Content\Effects\turret_alt_diff_tex_0.xnb
 Content\PlaySceneAssets\Levels\0.txt
 Content\PlaySceneAssets\Levels\1.txt
 Content\PlaySceneAssets\Levels\2.txt

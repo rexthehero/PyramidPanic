@@ -18,6 +18,9 @@ namespace PyramidPanic
         private static MouseState ms, oms;
         private static Rectangle mouseRectangle;
         private static GamePadState gps, ogps;
+        private static Keys[] alphabet = { Keys.A, Keys.B, Keys.C, Keys.D, Keys.D, Keys.D, Keys.D, Keys.E, Keys.F, Keys.G,
+                                           Keys.H, Keys.I, Keys.J , Keys.K, Keys.L, Keys.M, Keys.N, Keys.O, Keys.P, Keys.Q, Keys.R,
+                                           Keys.S, Keys.T, Keys.U, Keys.V, Keys.W, Keys.X, Keys.Y, Keys.Z, Keys.Back, Keys.Space};
 
         //Constructor wordt eenmaal aangeroepen.
         static Input()
@@ -40,6 +43,18 @@ namespace PyramidPanic
             ks = Keyboard.GetState();
             ms = Mouse.GetState();
             gps = GamePad.GetState(PlayerIndex.One);
+        }
+
+        public static Keys GetKey()
+        {
+            foreach (Keys key in alphabet)
+            {
+                if (EdgeDetectKeyDown(key))
+                {
+                    return key;
+                }
+            }
+            return Keys.F12;
         }
 
         

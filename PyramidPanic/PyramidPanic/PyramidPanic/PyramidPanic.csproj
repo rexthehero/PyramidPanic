@@ -18,6 +18,7 @@
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>pyramid.ico</ApplicationIcon>
     <Thumbnail>XBOXLives.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,7 +31,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -79,6 +79,10 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloomEffects\BloomComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BloomEffects\BloomSettings.cs" />
     <Compile Include="GameScenes\PlayScene\Block\Block.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkLeft.cs" />
     <Compile Include="HelperClasses\Image.cs" />

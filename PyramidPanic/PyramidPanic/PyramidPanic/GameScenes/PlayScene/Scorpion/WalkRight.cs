@@ -28,7 +28,7 @@ namespace PyramidPanic
         {
             //De scorpion loopt naar rechts
             this.scorpion.Position += new Vector2(this.scorpion.Speed, 0f);
-            if (this.scorpion.Position.X > 592)
+            if (this.scorpion.Position.X > 576)
             {
                 this.scorpion.State = new WalkLeft(this.scorpion);
             }
