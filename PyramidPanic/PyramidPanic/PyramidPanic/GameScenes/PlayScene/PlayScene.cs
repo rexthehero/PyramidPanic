@@ -44,11 +44,6 @@ namespace PyramidPanic
             {
                 this.game.GameState = new StartScene(this.game);
             }
-
-            if (Input.MouseEdgeDetectPressLeft())
-            {
-                this.game.Exit();
-            }
             this.level.Update(gameTime);
         }
 

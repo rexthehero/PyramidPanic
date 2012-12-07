@@ -46,7 +46,7 @@ namespace PyramidPanic
         {
             foreach (Beetle beetle in level.Beetles)
             {
-                for (int i = (int)(beetle.Position.Y / 32); i <= 13; i++)
+                for (int i = (int)(beetle.Position.Y / 32); i < 14; i++)
                 {
                     if (level.Blocks[(int)(beetle.Position.X / 32), i].BlockCollision == BlockCollision.NotPassable)
                     {
