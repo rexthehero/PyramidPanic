@@ -31,6 +31,11 @@ namespace PyramidPanic
         private Stream stream;
 
         //Properties
+        public List<Scorpion> Scorpions
+        {
+            get { return this.scorpions; }
+        }
+
         public List<Beetle> Beetles
         {
             get { return this.beetles; }
@@ -96,6 +101,7 @@ namespace PyramidPanic
                 }
             }
             BeetleManager.Level = this;
+            ScorpionManager.Level = this;
         }
 
         private Block LoadBlock(char blockElement, int x, int y)

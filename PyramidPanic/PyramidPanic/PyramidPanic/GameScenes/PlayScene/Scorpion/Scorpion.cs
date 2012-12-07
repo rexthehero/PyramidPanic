@@ -20,9 +20,21 @@ namespace PyramidPanic
         private Rectangle rectangle;
         private IScorpion state;
         private float speed;
-       
+        private float right, left;       
 
         //Properties
+        public float Left
+        {
+            set { this.left = value; }
+            get { return this.left; }
+        }
+
+        public float Right
+        {
+            set { this.right = value; }
+            get { return this.right; }
+        }
+
         public float Speed
         {
             get { return this.speed; }
