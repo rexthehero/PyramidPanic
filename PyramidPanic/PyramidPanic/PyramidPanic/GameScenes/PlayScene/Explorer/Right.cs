@@ -11,28 +11,25 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class WalkLeft : AnimatedSprite, IScorpion
+    public class Right : AnimatedSprite 
     {
-        private Scorpion scorpion;
-              
+        //Fields
+        private Explorer explorer;
+
         //Constructor
-        public WalkLeft(Scorpion scorpion) : base(scorpion)
+        public Right(Explorer explorer) : base(explorer)
         {
-            this.scorpion = scorpion;
-            this.angle = (float)Math.PI;
-        }        
-        
+            this.explorer = explorer;
+        }
+
+        //Update
         public override void Update(GameTime gameTime)
         {
-            //De scorpion loopt naar rechts
-            this.scorpion.Position -= new Vector2(this.scorpion.Speed, 0f);
-            if (this.scorpion.Position.X < this.scorpion.Left)
-            {
-                this.scorpion.State = new WalkRight(this.scorpion);
-            }
+            this.explorer.Position += new Vector2(this.explorer.Speed, 0f);
             base.Update(gameTime);
         }
 
+        //Draw
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);

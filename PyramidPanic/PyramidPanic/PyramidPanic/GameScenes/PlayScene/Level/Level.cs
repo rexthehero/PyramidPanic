@@ -25,8 +25,27 @@ namespace PyramidPanic
         private Image background;
         private List<Image> treasures;
         private Panel panel;
-        private Scorpion scorpion;
+        //private Scorpion scorpion;
+        private List<Scorpion> scorpions;
+        private List<Beetle> beetles;
         private Stream stream;
+        private Explorer explorer;
+
+        //Properties
+        public List<Scorpion> Scorpions
+        {
+            get { return this.scorpions; }
+        }
+
+        public List<Beetle> Beetles
+        {
+            get { return this.beetles; }
+        }
+
+        public Block[,] Blocks
+        {
+            get { return this.blocks; }
+        }
 
         //Constructor
         public Level(PyramidPanic game, int levelIndex)
@@ -56,6 +75,8 @@ namespace PyramidPanic
         private void LoadAssets()
         {
             this.treasures = new List<Image>();
+            this.scorpions = new List<Scorpion>();
+            this.beetles = new List<Beetle>();
             this.panel = new Panel(this.game, new Vector2(0f, 448f));
             this.lines = new List<string>();
             //StreamReader reader = new StreamReader(this.levelPath);
@@ -80,6 +101,8 @@ namespace PyramidPanic
                     this.blocks[column, row] = LoadBlock(blockElement, column * GRIDWIDTH, row * GRIDHEIGHT);
                 }
             }
+            BeetleManager.Level = this;
+            ScorpionManager.Level = this;
         }
 
         private Block LoadBlock(char blockElement, int x, int y)
@@ -98,9 +121,6 @@ namespace PyramidPanic
                 case 'd':
                     this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'd');
-                case 's':
-                    this.scorpion = new Scorpion(this.game, new Vector2(x, y), 2.0f);
-                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 's');
                 case 'w':
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, 'w');
                 case 'x':
@@ -109,6 +129,15 @@ namespace PyramidPanic
                     return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
                 case 'z':
                     return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');
+                case 'B':
+                    this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'B');
+                case 'S':
+                    this.scorpions.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'S');
+                case 'E':
+                    this.explorer = new Explorer(this.game, new Vector2(x, y), 2.0f);
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'E');
                 case '@':
                     this.background = new Image(this.game, @"PlaySceneAssets\Background\Background2", new Vector2(x, y));
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, '@');
@@ -122,7 +151,17 @@ namespace PyramidPanic
         //Update method
         public void Update(GameTime gameTime)
         {
-            this.scorpion.Update(gameTime);
+            foreach (Scorpion scorpion in this.scorpions)
+            {
+                scorpion.Update(gameTime);
+            }
+
+            foreach (Beetle beetle in this.beetles)
+            {
+                beetle.Update(gameTime);
+            }
+
+            this.explorer.Update(gameTime);
         }
 
         //Draw method
@@ -144,8 +183,20 @@ namespace PyramidPanic
                 treasure.Draw(gameTime);
             }
 
-            //if ( this.scorpion != null )
-            this.scorpion.Draw(gameTime);
+            foreach (Scorpion scorpion in this.scorpions)
+            {
+                scorpion.Draw(gameTime);
+            }
+
+            foreach (Beetle beetle in this.beetles)
+            {
+                beetle.Draw(gameTime);
+            }
+
+            if (this.explorer != null)
+            {
+                this.explorer.Draw(gameTime);
+            }
         }
     }
 }

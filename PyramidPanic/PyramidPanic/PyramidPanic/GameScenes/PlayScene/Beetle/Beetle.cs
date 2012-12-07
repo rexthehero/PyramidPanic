@@ -11,28 +11,29 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class Scorpion : IAnimatedSprite
+    public class Beetle : IAnimatedSprite
     {
         //Field
         private PyramidPanic game;
         private Texture2D texture;
         private Vector2 position;
         private Rectangle rectangle;
-        private IScorpion state;
+        private IBeetle state;
         private float speed;
-        private float right, left;       
+        private float top, bottom;
+       
 
         //Properties
-        public float Left
+        public float Top
         {
-            set { this.left = value; }
-            get { return this.left; }
+            set { this.top = value; }
+            get { return this.top; }
         }
 
-        public float Right
+        public float Bottom
         {
-            set { this.right = value; }
-            get { return this.right; }
+            get { return this.bottom; }
+            set { this.bottom = value; }
         }
 
         public float Speed
@@ -66,7 +67,7 @@ namespace PyramidPanic
             get { return this.rectangle; }
         }
 
-        public IScorpion State
+        public IBeetle State
         {
             get { return this.state; }
             set { this.state = value; }
@@ -74,14 +75,14 @@ namespace PyramidPanic
         
         
         //De constructor
-        public Scorpion(PyramidPanic game, Vector2 position, float speed)
+        public Beetle(PyramidPanic game, Vector2 position, float speed)
         {
             this.game = game;
-            this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Scorpion\Scorpion");
+            this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Beetles\Beetle");
             this.position = position;
             this.speed = speed;
             this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width/4, this.texture.Height);
-            this.state = new WalkRight(this);
+            this.state = new WalkDown(this);
         }
 
         //Update
