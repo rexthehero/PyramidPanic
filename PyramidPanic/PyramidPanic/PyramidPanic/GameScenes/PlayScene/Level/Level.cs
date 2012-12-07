@@ -29,6 +29,7 @@ namespace PyramidPanic
         private List<Scorpion> scorpions;
         private List<Beetle> beetles;
         private Stream stream;
+        private Explorer explorer;
 
         //Properties
         public List<Scorpion> Scorpions
@@ -128,12 +129,15 @@ namespace PyramidPanic
                     return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
                 case 'z':
                     return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');
-                case 'S':
-                    this.scorpions.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
-                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'S');
                 case 'B':
                     this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'B');
+                case 'S':
+                    this.scorpions.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'S');
+                case 'E':
+                    this.explorer = new Explorer(this.game, new Vector2(x, y), 2.0f);
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'E');
                 case '@':
                     this.background = new Image(this.game, @"PlaySceneAssets\Background\Background2", new Vector2(x, y));
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, '@');
@@ -156,6 +160,8 @@ namespace PyramidPanic
             {
                 beetle.Update(gameTime);
             }
+
+            this.explorer.Update(gameTime);
         }
 
         //Draw method
@@ -185,6 +191,11 @@ namespace PyramidPanic
             foreach (Beetle beetle in this.beetles)
             {
                 beetle.Draw(gameTime);
+            }
+
+            if (this.explorer != null)
+            {
+                this.explorer.Draw(gameTime);
             }
         }
     }

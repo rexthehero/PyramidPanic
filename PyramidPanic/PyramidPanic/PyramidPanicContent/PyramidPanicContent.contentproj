@@ -181,7 +181,13 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="PlaySceneAssets\Explorer\Explorer.png">
+      <Name>Explorer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="PlaySceneAssets\Beetles\Beetle.png">
       <Name>Beetle</Name>

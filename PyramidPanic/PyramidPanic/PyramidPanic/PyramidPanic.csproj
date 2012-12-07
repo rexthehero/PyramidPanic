@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="Explorer.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\BeetleManager.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\Beetle.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\IBeetle.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="GameScenes\QuitScene\QuitScene.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\Scorpion.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkRight.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\Right.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lives.png" />
