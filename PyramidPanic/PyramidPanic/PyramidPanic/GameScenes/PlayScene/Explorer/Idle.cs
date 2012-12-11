@@ -15,6 +15,7 @@ namespace PyramidPanic
     {
         //Fields
         private Explorer explorer;
+        
 
         //Properties
 
@@ -22,7 +23,13 @@ namespace PyramidPanic
         public Idle(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
-            this.i = 1;
+        }
+
+        //Dit is een overload van de constructor van de Idle class.
+        public Idle(Explorer explorer, float angle) : base(explorer)
+        {
+            this.explorer = explorer;
+            this.angle = angle;
         }
 
         //Update
@@ -39,6 +46,10 @@ namespace PyramidPanic
             else if (Input.DetectKeyDown(Keys.Up))
             {
                 this.explorer.State = new Up(this.explorer);
+            }
+            else if (Input.DetectKeyDown(Keys.Down))
+            {
+                this.explorer.State = new Down(this.explorer);
             }
             //base.Update(gameTime);
         }

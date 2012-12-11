@@ -21,6 +21,7 @@ namespace PyramidPanic
         {
             this.explorer = explorer;
             this.angle = (float)Math.PI;
+            this.i = 0;
         }
 
         //Update
@@ -29,7 +30,7 @@ namespace PyramidPanic
             this.explorer.Position -= new Vector2(this.explorer.Speed, 0f);
             if (Input.DetectKeyUp(Keys.Left))
             {
-                this.explorer.State = new Idle(this.explorer);
+                this.explorer.State = new Idle(this.explorer, (float)Math.PI);
             }
             base.Update(gameTime);
         }
