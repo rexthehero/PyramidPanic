@@ -19,10 +19,22 @@ namespace PyramidPanic
         private Vector2 position;
         private Rectangle rectangle;
         private IScorpion state;
+        private WalkLeft walkLeft;
+        private WalkRight walkRight;
         private float speed;
         private float right, left;       
 
         //Properties
+        public WalkLeft WalkLeft
+        {
+            get { return this.walkLeft; }
+        }
+
+        public WalkRight WalkRight
+        {
+            get { return this.walkRight; }
+        }
+
         public float Left
         {
             set { this.left = value; }
@@ -81,7 +93,9 @@ namespace PyramidPanic
             this.position = position;
             this.speed = speed;
             this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width/4, this.texture.Height);
-            this.state = new WalkRight(this);
+            this.walkRight = new WalkRight(this);
+            this.walkLeft = new WalkLeft(this);
+            this.state = this.walkRight;
         }
 
         //Update

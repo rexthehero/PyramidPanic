@@ -217,10 +217,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
     <Compile Include="Effects\sunset.jpg">
       <Name>sunset</Name>
-=======
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+<!--=======-->
     <Compile Include="PlaySceneAssets\Explorer\Explorer.png">
       <Name>Explorer</Name>
       <Importer>TextureImporter</Importer>
@@ -230,7 +235,7 @@
   <ItemGroup>
     <Compile Include="PlaySceneAssets\Beetles\Beetle.png">
       <Name>Beetle</Name>
->>>>>>> master
+<!-->>>>>>> master-->
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -6,6 +6,8 @@ Content\StartSceneAssets\Button_load.xnb
 Content\StartSceneAssets\Button_quit.xnb
 Content\StartSceneAssets\Button_scores.xnb
 Content\StartSceneAssets\Button_start.xnb
+Content\Effects\engine_diff_tex.xnb
+Content\Effects\turret_alt_diff_tex.xnb
 Content\PlaySceneAssets\Blocks\Block.xnb
 Content\PlaySceneAssets\Blocks\Transparant.xnb
 Content\PlaySceneAssets\Blocks\Wall1.xnb
@@ -19,16 +21,14 @@ Content\PlaySceneAssets\Blocks\Door.xnb
 Content\PlaySceneAssets\Panel\Panel.xnb
 Content\PlaySceneAssets\Panel\Lives.xnb
 Content\PlaySceneAssets\Scorpion\Scorpion.xnb
+Content\Effects\sunset.xnb
 Content\PlaySceneAssets\Explorer\Explorer.xnb
 Content\PlaySceneAssets\Beetles\Beetle.xnb
 Content\PlaySceneAssets\Fonts\Arial.xnb
+Content\Effects\hudFont.xnb
 Content\Effects\BloomCombine.xnb
 Content\Effects\BloomExtract.xnb
 Content\Effects\GaussianBlur.xnb
-Content\Effects\engine_diff_tex.xnb
-Content\Effects\turret_alt_diff_tex.xnb
-Content\Effects\sunset.xnb
-Content\Effects\hudFont.xnb
 Content\Effects\tank.xnb
 Content\Effects\engine_diff_tex_0.xnb
 Content\Effects\turret_alt_diff_tex_0.xnb

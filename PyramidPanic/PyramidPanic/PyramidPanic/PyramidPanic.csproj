@@ -79,20 +79,15 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="BloomEffects\BloomComponent.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="BloomEffects\BloomComponent.cs" />
     <Compile Include="BloomEffects\BloomSettings.cs" />
-=======
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
-    <Compile Include="Explorer.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\Explorer.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\BeetleManager.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\Beetle.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\IBeetle.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\WalkDown.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\WalkUp.cs" />
->>>>>>> master
     <Compile Include="GameScenes\PlayScene\Block\Block.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\ScorpionManager.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkLeft.cs" />
