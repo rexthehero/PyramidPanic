@@ -95,6 +95,7 @@
     <Compile Include="GameScenes\StartScene\MenuStartScene.cs" />
     <Compile Include="GameScenes\HelpScene\HelpScene.cs" />
     <Compile Include="AnimatedSprite\IAnimatedSprite.cs" />
+    <Compile Include="Idle.cs" />
     <Compile Include="Input\Input.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="GameScenes\PlayScene\Scorpion\Scorpion.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkRight.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Right.cs" />
+    <Compile Include="Up.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lives.png" />

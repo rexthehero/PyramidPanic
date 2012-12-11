@@ -144,7 +144,7 @@ namespace PyramidPanic
                                   Color.White,
                                   0f,
                                   new Vector2(this.renderTarget2D.Width / 2, this.renderTarget2D.Height / 2),
-                                  0.9f,
+                                  0.98f,
                                   SpriteEffects.None,
                                   0f);
             this.spriteBatch.End();
@@ -155,7 +155,7 @@ namespace PyramidPanic
             base.Draw(gameTime);            
             //**********************************************************
 
-            DrawOverlayText(); 
+            //DrawOverlayText(); 
         }
 
         private void HandleInput()

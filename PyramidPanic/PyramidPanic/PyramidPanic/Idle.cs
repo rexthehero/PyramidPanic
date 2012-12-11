@@ -8,32 +8,33 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using PyramidPanic;
 
 namespace PyramidPanic
 {
-    public class Right : AnimatedSprite 
+    public class Idle : AnimatedSprite
     {
-        //Fields
         private Explorer explorer;
 
-        //Constructor
-        public Right(Explorer explorer) : base(explorer)
+        public Idle(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
+            this.i = 1;
         }
 
-        //Update
         public override void Update(GameTime gameTime)
         {
-            this.explorer.Position += new Vector2(this.explorer.Speed, 0f);
-            if (Input.DetectKeyUp(Keys.Right))
+            if ( Input.DetectKeyDown(Keys.Right))
             {
-                this.explorer.State = new Idle(this.explorer);
+                this.explorer.State = new Right(explorer);
             }
-            base.Update(gameTime);
+            else if (Input.DetectKeyDown(Keys.Up))
+            {
+                this.explorer.State = new Up(explorer);
+            }
+            //base.Update(gameTime);
         }
 
-        //Draw
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
