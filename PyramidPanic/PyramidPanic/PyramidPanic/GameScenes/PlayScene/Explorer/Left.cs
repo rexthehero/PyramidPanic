@@ -11,22 +11,23 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class Right : AnimatedSprite 
+    public class Left : AnimatedSprite 
     {
         //Fields
         private Explorer explorer;
 
         //Constructor
-        public Right(Explorer explorer) : base(explorer)
+        public Left(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
+            this.angle = (float)Math.PI;
         }
 
         //Update
         public override void Update(GameTime gameTime)
         {
-            this.explorer.Position += new Vector2(this.explorer.Speed, 0f);
-            if (Input.DetectKeyUp(Keys.Right))
+            this.explorer.Position -= new Vector2(this.explorer.Speed, 0f);
+            if (Input.DetectKeyUp(Keys.Left))
             {
                 this.explorer.State = new Idle(this.explorer);
             }
