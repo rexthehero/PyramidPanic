@@ -16,11 +16,7 @@ namespace PyramidPanic
         //Field
         private IAnimatedSprite animatedSprite;
         private int[] xValue = { 0, 32, 64, 96 };
-<<<<<<< HEAD
-        protected int i = 0;
-=======
         protected int i = 1;
->>>>>>> master
         private float timer;
         protected float angle = 0f;
         

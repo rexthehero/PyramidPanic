@@ -5,7 +5,7 @@
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PyramidPanic</RootNamespace>
     <AssemblyName>PyramidPanic</AssemblyName>
@@ -60,7 +60,7 @@
     <XnaCompressContent>true</XnaCompressContent>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>PyramidPanic.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility">
@@ -82,12 +82,9 @@
     <Compile Include="BloomEffects\BloomComponent.cs" />
     <Compile Include="BloomEffects\BloomSettings.cs" />
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="GameScenes\PlayScene\Explorer\Down.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Up.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Left.cs" />
->>>>>>> master
     <Compile Include="GameScenes\PlayScene\Explorer\Explorer.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\BeetleManager.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\Beetle.cs" />
@@ -101,11 +98,7 @@
     <Compile Include="GameScenes\StartScene\MenuStartScene.cs" />
     <Compile Include="GameScenes\HelpScene\HelpScene.cs" />
     <Compile Include="AnimatedSprite\IAnimatedSprite.cs" />
-<<<<<<< HEAD
-    <Compile Include="Idle.cs" />
-=======
     <Compile Include="GameScenes\PlayScene\Explorer\Idle.cs" />
->>>>>>> master
     <Compile Include="Input\Input.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />
@@ -123,7 +116,6 @@
     <Compile Include="GameScenes\PlayScene\Scorpion\Scorpion.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkRight.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Right.cs" />
-    <Compile Include="Up.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lives.png" />

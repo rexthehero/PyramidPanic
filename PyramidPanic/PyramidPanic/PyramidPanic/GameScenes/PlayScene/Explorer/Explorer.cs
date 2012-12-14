@@ -26,10 +26,7 @@ namespace PyramidPanic
         //Properties
         public AnimatedSprite State
         {
-<<<<<<< HEAD:PyramidPanic/PyramidPanic/PyramidPanic/GameScenes/PlayScene/Explorer/Explorer.cs
             get { return this.state; }
-=======
->>>>>>> master:PyramidPanic/PyramidPanic/PyramidPanic/GameScenes/PlayScene/Explorer/Explorer.cs
             set { this.state = value; }
         }
 

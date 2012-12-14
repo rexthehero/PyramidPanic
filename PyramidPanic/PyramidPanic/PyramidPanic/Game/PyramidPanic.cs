@@ -63,13 +63,7 @@ namespace PyramidPanic
             this.graphics = new GraphicsDeviceManager(this);
             this.Content.RootDirectory = "Content";
             this.IsFixedTimeStep = true;
-<<<<<<< HEAD
             TargetElapsedTime = TimeSpan.FromSeconds(1.0f/60.0f);
-
-           
-=======
-            TargetElapsedTime = TimeSpan.FromSeconds(1.0f/10.0f);
->>>>>>> master
         }
 
         protected override void Initialize()
@@ -222,20 +216,6 @@ namespace PyramidPanic
             this.spriteBatch.DrawString(spriteFont, text, new Vector2(64, 64), Color.White);
 
             this.spriteBatch.End();
-        }
-    }
-
-    static class Program
-    {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        static void Main(string[] args)
-        {
-            using (PyramidPanic game = new PyramidPanic())
-            {
-                game.Run();
-            }
         }
     }
 }
