@@ -63,9 +63,13 @@ namespace PyramidPanic
             this.graphics = new GraphicsDeviceManager(this);
             this.Content.RootDirectory = "Content";
             this.IsFixedTimeStep = true;
+<<<<<<< HEAD
             TargetElapsedTime = TimeSpan.FromSeconds(1.0f/60.0f);
 
            
+=======
+            TargetElapsedTime = TimeSpan.FromSeconds(1.0f/10.0f);
+>>>>>>> master
         }
 
         protected override void Initialize()

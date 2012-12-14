@@ -82,6 +82,12 @@
     <Compile Include="BloomEffects\BloomComponent.cs" />
     <Compile Include="BloomEffects\BloomSettings.cs" />
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="GameScenes\PlayScene\Explorer\Down.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\Up.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\Left.cs" />
+>>>>>>> master
     <Compile Include="GameScenes\PlayScene\Explorer\Explorer.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\BeetleManager.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\Beetle.cs" />
@@ -95,7 +101,11 @@
     <Compile Include="GameScenes\StartScene\MenuStartScene.cs" />
     <Compile Include="GameScenes\HelpScene\HelpScene.cs" />
     <Compile Include="AnimatedSprite\IAnimatedSprite.cs" />
+<<<<<<< HEAD
     <Compile Include="Idle.cs" />
+=======
+    <Compile Include="GameScenes\PlayScene\Explorer\Idle.cs" />
+>>>>>>> master
     <Compile Include="Input\Input.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />
