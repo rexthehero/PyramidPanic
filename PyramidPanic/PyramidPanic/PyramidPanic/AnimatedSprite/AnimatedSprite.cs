@@ -30,7 +30,7 @@ namespace PyramidPanic
         {
             //Dit is de code voor de animatie van de sprite
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (this.timer > 1f / 8f)
+            if (this.timer > 1f / 12f)
             {
                 this.timer = 0;
                 this.i++;
