@@ -3,6 +3,7 @@
 **/bin/
 **/obj/
 PyramidPanic/PyramidPanic/PyramidPanic/bin/
+PyramidPanic/PyramidPanic/PyramidPanic/obj/
 **/bin/*
 **/obj/*
 *.cachefile
