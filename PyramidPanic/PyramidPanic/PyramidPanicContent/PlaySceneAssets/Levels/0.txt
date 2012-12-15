@@ -5,10 +5,10 @@ w.w.E...wddddd.....y
 y.B.aaaa..aaa......z
 x...ywwywyw....B...x
 w.w......S..w......y
-w....wwwwww.ccc....w
+w....wwwwww.ccc.....
 x.bbbbbbbS.....w...x
 y..dddB.....bbbb...w
-w..SE...w..........y
-y.wbbbwbbbbbbbbb.B.x
+...SE...w..........y
+y.wbbbwbbbbbbbbb.B..
 z..y.d........S.w..x
 xwyxwwxywwxyxxwxywxy
