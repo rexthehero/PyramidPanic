@@ -2,6 +2,7 @@
 *.suo
 **/bin/
 **/obj/
+PyramidPanic/PyramidPanic/PyramidPanic/bin/
 **/bin/*
 **/obj/*
 *.cachefile
