@@ -59,7 +59,7 @@ namespace PyramidPanic
             Console.WriteLine("File Size: " + stream.Length);
             stream.Close();
             */
-            this.stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\0.txt");
+            this.stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\3.txt");
             this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
 
             //eeee
@@ -103,6 +103,7 @@ namespace PyramidPanic
             }
             BeetleManager.Level = this;
             ScorpionManager.Level = this;
+            ExplorerManager.Level = this;
         }
 
         private Block LoadBlock(char blockElement, int x, int y)
