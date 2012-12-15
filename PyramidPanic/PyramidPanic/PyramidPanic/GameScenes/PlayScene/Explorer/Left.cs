@@ -34,7 +34,9 @@ namespace PyramidPanic
                 this.explorer.Position = new Vector2((geheelAantalmalen32 + 1) * 32, this.explorer.Position.Y);
                 if (Input.DetectKeyUp(Keys.Left))
                 {
-                    this.explorer.State = new Idle(this.explorer, (float)Math.PI);
+                    //this.explorer.State = new Idle(this.explorer, (float)Math.PI);
+                    this.explorer.State = this.explorer.Idle;
+                    this.explorer.Idle.Angle = (float)Math.PI;
                 }
             }
             if (Input.DetectKeyUp(Keys.Left))
@@ -44,7 +46,9 @@ namespace PyramidPanic
                 {
                     int geheelAantalmalen32 = (int)this.explorer.Position.X / 32;
                     this.explorer.Position = ( this.explorer.Position.X >= 0 ) ? new Vector2(geheelAantalmalen32 * 32, this.explorer.Position.Y) : new Vector2((geheelAantalmalen32 - 1) * 32, this.explorer.Position.Y) ;
-                    this.explorer.State = new Idle(this.explorer, (float)Math.PI);
+                    //this.explorer.State = new Idle(this.explorer, (float)Math.PI);
+                    this.explorer.State = this.explorer.Idle;
+                    this.explorer.Idle.Angle = (float)Math.PI;
                 }
             }
             base.Update(gameTime);

@@ -21,9 +21,40 @@ namespace PyramidPanic
         private float speed;
 
         //State variable is de parentclass van de toestandsklassen
-        AnimatedSprite state;
+        private AnimatedSprite state;
+        private Right right;
+        private Left left;
+        private Up up;
+        private Down down;
+        private Idle idle;
+        
 
         //Properties
+        public Right Right
+        {
+            get { return this.right; }
+        }
+
+        public Left Left
+        {
+            get { return this.left; }
+        }
+
+        public Up Up
+        {
+            get { return this.up; }
+        }
+
+        public Down Down
+        {
+            get { return this.down; }
+        }
+
+        public Idle Idle
+        {
+            get { return this.idle; }
+        }
+
         public AnimatedSprite State
         {
             get { return this.state; }
@@ -83,8 +114,13 @@ namespace PyramidPanic
             this.collisionRectangle = new Rectangle((int)position.X,
                                                     (int)position.Y,
                                                     32,
-                                                    32);           
-            this.state = new Idle(this);
+                                                    32);
+            this.right = new Right(this);
+            this.left = new Left(this);
+            this.up = new Up(this);
+            this.down = new Down(this);
+            this.idle = new Idle(this);
+            this.state = this.idle;
         }
 
         public void Update(GameTime gameTime)
