@@ -34,7 +34,7 @@ namespace PyramidPanic
             {
                 this.timer = 0;
                 this.i++;
-                if (this.i > 2)
+                if (this.i > 3)
                 {
                     this.i = 0;
                 }

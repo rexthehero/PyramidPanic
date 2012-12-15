@@ -83,7 +83,7 @@ namespace PyramidPanic
             this.collisionRectangle = new Rectangle((int)position.X,
                                                     (int)position.Y,
                                                     32,
-                                                    32);
+                                                    32);           
             this.state = new Idle(this);
         }
 
@@ -95,7 +95,7 @@ namespace PyramidPanic
 
         public void Draw(GameTime gameTime)
         {
-            this.game.SpriteBatch.Draw(this.collisionText, this.collisionRectangle, Color.White);
+            this.game.SpriteBatch.Draw(this.collisionText, this.CollisionRectangle, Color.White);
             this.state.Draw(gameTime);
         }
     }
