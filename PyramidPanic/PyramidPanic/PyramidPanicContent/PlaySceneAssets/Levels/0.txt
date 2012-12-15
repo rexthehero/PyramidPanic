@@ -1,7 +1,7 @@
 @xwxywxyxywwxyxwxyxx
 y..aaaaaaaaaaaa....w
 xc.ccccccScccc.w...x
-w.w.E.dddddddd.....y
+w.w.E...wddddd.....y
 y.B.aaaa..aaa......z
 x...ywwywyw....B...x
 w.w......S..w......y
