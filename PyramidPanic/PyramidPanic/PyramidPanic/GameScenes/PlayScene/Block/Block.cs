@@ -28,6 +28,11 @@ namespace PyramidPanic
         {
             get { return this.blockCollision; }
         }
+
+        public Rectangle Rectangle
+        {
+            get { return this.rectangle; }
+        }
         
         //Constructor
         public Block(PyramidPanic game, string blockName,

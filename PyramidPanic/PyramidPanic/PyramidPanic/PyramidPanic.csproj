@@ -82,6 +82,7 @@
     <Compile Include="BloomEffects\BloomComponent.cs" />
     <Compile Include="BloomEffects\BloomSettings.cs" />
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\ExplorerManager.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Down.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Up.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Left.cs" />

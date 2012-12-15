@@ -1,5 +1,10 @@
 *.swp
 *.suo
+**/bin/
+**/obj/
+PyramidPanic/PyramidPanic/PyramidPanic/bin/
+PyramidPanic/PyramidPanic/PyramidPanic/obj/
+PyramidPanic/PyramidPanic/PyramidPanicContent/obj/
 **/bin/*
 **/obj/*
 *.cachefile
@@ -7,7 +12,4 @@
 *.csproj.Debug.cachefile
 *.ccgame
 !*.dll
-PyramidPanic/PyramidPanic/PyramidPanic/obj/
-PyramidPanic/PyramidPanic/PyramidPanic/bin/
-PyramidPanic/PyramidPanic/PyramidPanicContent/obj/
-PyramidPanic/PyramidPanic/PyramidPanic/PyramidPanic.csproj.Debug.cachefile
+*.xls

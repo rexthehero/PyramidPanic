@@ -15,8 +15,8 @@ namespace PyramidPanic
     {
         //Fields
         private PyramidPanic game;
-        private Texture2D texture;
-        private Rectangle rectangle;
+        private Texture2D texture, collisionText;
+        private Rectangle rectangle, collisionRectangle;
         private Vector2 position;
         private float speed;
 
@@ -40,6 +40,11 @@ namespace PyramidPanic
             get { return this.rectangle; }
         }
 
+        public Rectangle CollisionRectangle
+        {
+            get { return this.collisionRectangle; }
+        }
+
         public Texture2D Texture
         {
             get { return this.texture; }
@@ -53,6 +58,8 @@ namespace PyramidPanic
                 this.position = value;
                 this.rectangle.X = (int)this.position.X + 16;
                 this.rectangle.Y = (int)this.position.Y + 16;
+                this.collisionRectangle.X = (int)this.position.X;
+                this.collisionRectangle.Y = (int)this.position.Y;
             }
         }
 
@@ -67,21 +74,28 @@ namespace PyramidPanic
             this.game = game;
             this.position = position;
             this.speed = speed;
-            this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\Explorer");
+            this.texture = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\Explorer");
             this.rectangle = new Rectangle((int)position.X + 16,
                                            (int)position.Y + 16,
                                            this.texture.Width/4,
                                            this.texture.Height);
+            this.collisionText = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\collisionTexture");
+            this.collisionRectangle = new Rectangle((int)position.X,
+                                                    (int)position.Y,
+                                                    32,
+                                                    32);
             this.state = new Idle(this);
         }
 
         public void Update(GameTime gameTime)
         {
+            ExplorerManager.Explorer = this;
             this.state.Update(gameTime);
         }
 
         public void Draw(GameTime gameTime)
         {
+            this.game.SpriteBatch.Draw(this.collisionText, this.collisionRectangle, Color.White);
             this.state.Draw(gameTime);
         }
     }
