@@ -1,6 +1,7 @@
 *.swp
 *.suo
 **/bin/
+**/obj/
 **/bin/*
 **/obj/*
 *.cachefile
