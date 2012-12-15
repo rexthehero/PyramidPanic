@@ -60,7 +60,7 @@ namespace PyramidPanic
             stream.Close();
             */
             this.stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\0.txt");
-            this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+            //this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
 
             //eeee
             //IAsyncResult result = StorageDevice.BeginShowSelector(
