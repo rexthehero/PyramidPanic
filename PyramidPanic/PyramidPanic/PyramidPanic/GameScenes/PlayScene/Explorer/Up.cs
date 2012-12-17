@@ -28,6 +28,17 @@ namespace PyramidPanic
         public override void Update(GameTime gameTime)
         {
             this.explorer.Position -= new Vector2(0f, this.explorer.Speed);
+            //Collision detection met NotPassable objects
+            if (ExplorerManager.CollisionDetectionWalls())
+            {
+                int geheelAantalmalen32 = (int)this.explorer.Position.Y / 32;
+                this.explorer.Position = new Vector2(this.explorer.Position.X, (geheelAantalmalen32 + 1) * 32 );
+                if (Input.DetectKeyUp(Keys.Up))
+                {
+                    this.explorer.State = new Idle(this.explorer, -(float)Math.PI/2);
+                }
+            }
+            //Blijf op het grid            
             if (Input.DetectKeyUp(Keys.Up))
             {
                 float modulo = this.explorer.Position.Y % 32;

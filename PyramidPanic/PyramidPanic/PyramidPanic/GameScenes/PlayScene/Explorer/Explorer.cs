@@ -94,7 +94,7 @@ namespace PyramidPanic
 
         public void Draw(GameTime gameTime)
         {
-            this.game.SpriteBatch.Draw(this.collisionText, this.collisionRectangle, Color.White);
+            //this.game.SpriteBatch.Draw(this.collisionText, this.collisionRectangle, Color.White);
             this.state.Draw(gameTime);
         }
     }
