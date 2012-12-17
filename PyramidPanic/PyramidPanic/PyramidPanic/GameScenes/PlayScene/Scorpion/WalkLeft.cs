@@ -28,7 +28,7 @@ namespace PyramidPanic
             this.scorpion.Position -= new Vector2(this.scorpion.Speed, 0f);
             if (this.scorpion.Position.X < this.scorpion.Left)
             {
-                this.scorpion.State = new WalkRight(this.scorpion);
+                this.scorpion.State = this.scorpion.WalkRight;
             }
             base.Update(gameTime);
         }
