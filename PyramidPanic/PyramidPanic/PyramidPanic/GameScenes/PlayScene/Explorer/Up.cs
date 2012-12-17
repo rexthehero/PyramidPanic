@@ -41,11 +41,15 @@ namespace PyramidPanic
             //Blijf op het grid            
             if (Input.DetectKeyUp(Keys.Up))
             {
-                float modulo = this.explorer.Position.Y % 32;
+                float modulo = (this.explorer.Position.Y >=0) ? 
+                                this.explorer.Position.Y % 32 :
+                                32 + this.explorer.Position.Y;
                 if (modulo <= this.explorer.Speed)
                 {
                     int geheelAantalmalen32 = (int)this.explorer.Position.Y / 32;
-                    this.explorer.Position = new Vector2(this.explorer.Position.X, geheelAantalmalen32 * 32);
+                    this.explorer.Position = (this.explorer.Position.Y >= 0) ?
+                                              new Vector2(this.explorer.Position.X, geheelAantalmalen32 * 32) :
+                                              new Vector2(this.explorer.Position.X, (geheelAantalmalen32 - 1) * 32);
                     this.explorer.State = new Idle(this.explorer, -(float)Math.PI/2);
                 }
             }
