@@ -5,6 +5,7 @@
 PyramidPanic/PyramidPanic/PyramidPanic/bin/
 PyramidPanic/PyramidPanic/PyramidPanic/obj/
 PyramidPanic/PyramidPanic/PyramidPanicContent/obj/
+PyramidPanic/PyramidPanic.suo
 **/bin/*
 **/obj/*
 *.cachefile
