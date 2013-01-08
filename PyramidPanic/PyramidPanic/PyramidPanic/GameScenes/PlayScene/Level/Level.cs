@@ -32,6 +32,12 @@ namespace PyramidPanic
         private Explorer explorer;
 
         //Properties
+        public List<Image> Treasures
+        {
+            get { return this.treasures; }
+            set { this.treasures = value; }
+        }
+
         public List<Scorpion> Scorpions
         {
             get { return this.scorpions; }
@@ -70,6 +76,7 @@ namespace PyramidPanic
 
             //eeeee
             this.LoadAssets();
+            Score.Initialize();
         }
 
         private void LoadAssets()
@@ -111,16 +118,16 @@ namespace PyramidPanic
             switch (blockElement)
             {
                 case 'a':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Treasure1", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('a', this.game, @"PlaySceneAssets\Treasures\Treasure1", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'a');
                 case 'b':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Treasure2", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('b', this.game, @"PlaySceneAssets\Treasures\Treasure2", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'b');
                 case 'c':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Potion", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('c', this.game, @"PlaySceneAssets\Treasures\Potion", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'c');
                 case 'd':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('d', this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'd');
                 case 'w':
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, 'w');

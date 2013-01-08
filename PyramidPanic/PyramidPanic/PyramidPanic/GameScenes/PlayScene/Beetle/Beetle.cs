@@ -15,9 +15,9 @@ namespace PyramidPanic
     {
         //Field
         private PyramidPanic game;
-        private Texture2D texture;
+        private Texture2D texture, collisionTexture;
         private Vector2 position;
-        private Rectangle rectangle;
+        private Rectangle rectangle, collisionRectangle;
         private IBeetle state;
         private float speed;
         private float top, bottom;
@@ -49,6 +49,8 @@ namespace PyramidPanic
                 this.position = value;
                 this.rectangle.X = (int)this.position.X + 16;
                 this.rectangle.Y = (int)this.position.Y + 16;
+                this.collisionRectangle.X = (int)this.position.X;
+                this.collisionRectangle.Y = (int)this.position.Y;
             }
         }
 
@@ -67,6 +69,11 @@ namespace PyramidPanic
             get { return this.rectangle; }
         }
 
+        public Rectangle CollisionRectangle
+        {
+            get { return this.collisionRectangle; }
+        }
+
         public IBeetle State
         {
             get { return this.state; }
@@ -79,9 +86,11 @@ namespace PyramidPanic
         {
             this.game = game;
             this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Beetles\Beetle");
+            this.collisionTexture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\collisionTexture");
             this.position = position;
             this.speed = speed;
             this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width/4, this.texture.Height);
+            this.collisionRectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
             this.state = new WalkDown(this);
         }
 
@@ -94,6 +103,7 @@ namespace PyramidPanic
         //Draw methode
         public void Draw(GameTime gameTime)
         {
+            this.game.SpriteBatch.Draw(this.collisionTexture, this.collisionRectangle, Color.White);
             this.state.Draw(gameTime);
         }
     }
