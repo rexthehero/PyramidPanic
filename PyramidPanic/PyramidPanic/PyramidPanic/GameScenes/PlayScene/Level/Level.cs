@@ -23,7 +23,7 @@ namespace PyramidPanic
         private const int GRIDWIDTH = 32;
         private const int GRIDHEIGHT = 32;
         private Image background;
-        private List<Image> treasures;
+        private List<Treasure> treasures;
         private Panel panel;
         //private Scorpion scorpion;
         private List<Scorpion> scorpions;
@@ -32,6 +32,11 @@ namespace PyramidPanic
         private Explorer explorer;
 
         //Properties
+        public List<Treasure> Treasures
+        {
+            get { return this.treasures; }
+        }
+
         public List<Scorpion> Scorpions
         {
             get { return this.scorpions; }
@@ -74,7 +79,7 @@ namespace PyramidPanic
 
         private void LoadAssets()
         {
-            this.treasures = new List<Image>();
+            this.treasures = new List<Treasure>();
             this.scorpions = new List<Scorpion>();
             this.beetles = new List<Beetle>();
             this.panel = new Panel(this.game, new Vector2(0f, 448f));
@@ -111,16 +116,16 @@ namespace PyramidPanic
             switch (blockElement)
             {
                 case 'a':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Treasure1", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('a', this.game, @"PlaySceneAssets\Treasures\Treasure1", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'a');
                 case 'b':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Treasure2", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('b', this.game, @"PlaySceneAssets\Treasures\Treasure2", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'b');
                 case 'c':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Potion", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('c', this.game, @"PlaySceneAssets\Treasures\Potion", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'c');
                 case 'd':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('d', this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'd');
                 case 'w':
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, 'w');
@@ -143,7 +148,7 @@ namespace PyramidPanic
                     this.background = new Image(this.game, @"PlaySceneAssets\Background\Background2", new Vector2(x, y));
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, '@');
                 case '.':
-                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');   
                 default:
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');
             }

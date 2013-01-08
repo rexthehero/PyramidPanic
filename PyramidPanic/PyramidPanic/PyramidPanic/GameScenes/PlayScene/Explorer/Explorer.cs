@@ -126,6 +126,7 @@ namespace PyramidPanic
         public void Update(GameTime gameTime)
         {
             ExplorerManager.Explorer = this;
+            ExplorerManager.PickingUpTreasures();
             this.state.Update(gameTime);
         }
 

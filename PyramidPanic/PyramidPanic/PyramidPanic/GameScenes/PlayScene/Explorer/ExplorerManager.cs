@@ -45,5 +45,33 @@ namespace PyramidPanic
             }            
             return false;
         }
+
+        public static void PickingUpTreasures()
+        {
+            foreach (Treasure image in level.Treasures)
+            {
+                if (explorer.CollisionRectangle.Intersects(image.Rectangle))
+                {
+                    level.Treasures.Remove(image);
+                    switch (image.Name)
+                    {
+                        case 'a':
+                            Score.ScorePoints += 10;
+                            break;
+                        case 'b':
+                            Score.ScorePoints += 100;
+                            break;
+                        case 'c':
+                            Score.Lives += 1;
+                            break;
+                        case 'd':
+                            Score.ScorePoints += 50;
+                            Score.Scarab += 1;
+                            break;
+                    }
+                    break;
+                }
+            }
+        }
     }
 }

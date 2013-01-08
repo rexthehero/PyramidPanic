@@ -25,6 +25,7 @@ namespace PyramidPanic
             get { return this.rectangle; }
         }
 
+        public Vector2 Position { get; set; }
         //Constructor
         public Image(PyramidPanic game, string pathName, Vector2 position)
         {
