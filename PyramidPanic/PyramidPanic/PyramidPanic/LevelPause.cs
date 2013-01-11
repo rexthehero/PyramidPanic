@@ -20,7 +20,19 @@ namespace PyramidPanic
         private Image overlay;
         private int pauseTimeOver = 3;
         private float timer = 0;
+        private int removeIndex = -1;
+        private string removeType;
 
+        //Properties
+        public int RemoveIndex
+        {
+            set { this.removeIndex = value; }
+        }
+
+        public string RemoveType
+        {
+            set { this.removeType = value; }
+        }
         //Constructor
         public LevelPause(Level level)
         {
@@ -33,7 +45,22 @@ namespace PyramidPanic
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (this.timer > this.pauseTimeOver)
             {
-                this.level.LevelState = new LevelPlay(this.level);
+                switch (this.removeType)
+                {
+                    case "Scorpion":
+                        level.Scorpions.RemoveAt(this.removeIndex);
+                        break;
+                    case "Beetle":
+                        level.Beetles.RemoveAt(this.removeIndex);
+                        break;
+                    default:
+                        break;
+                }
+                level.Explorer.Position = new Vector2(9*32f, 6*32f);
+                level.Explorer.State = new Idle(level.Explorer);
+                this.removeIndex = -1;
+                this.level.LevelState = level.LevelPlay;
+                this.timer = 0f;
             }
         }
 

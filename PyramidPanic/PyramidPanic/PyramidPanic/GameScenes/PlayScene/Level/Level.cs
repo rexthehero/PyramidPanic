@@ -31,6 +31,8 @@ namespace PyramidPanic
         private Stream stream;
         private Explorer explorer;
         private ILevel levelState;
+        private LevelPause levelPause;
+        private LevelPlay levelPlay;
 
         //Properties
         public List<Image> Treasures
@@ -71,6 +73,18 @@ namespace PyramidPanic
             set { this.levelState = value; }
         }
 
+        public LevelPause LevelPause
+        {
+            get { return this.levelPause; }
+            set { this.levelPause = value; }
+        }
+
+        public LevelPlay LevelPlay
+        {
+            get { return this.levelPlay; }
+            set { this.levelPlay = value; }
+        }
+
         //Constructor
         public Level(PyramidPanic game, int levelIndex)
         {
@@ -95,7 +109,9 @@ namespace PyramidPanic
             //eeeee
             this.LoadAssets();
             Score.Initialize();
-            this.levelState = new LevelPlay(this);
+            this.levelPause = new LevelPause(this);
+            this.levelPlay = new LevelPlay(this);
+            this.levelState = this.levelPlay;
         }
 
         private void LoadAssets()
