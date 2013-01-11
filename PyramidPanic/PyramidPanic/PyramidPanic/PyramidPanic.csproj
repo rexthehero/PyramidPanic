@@ -100,6 +100,7 @@
     <Compile Include="GameScenes\HelpScene\HelpScene.cs" />
     <Compile Include="AnimatedSprite\IAnimatedSprite.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Idle.cs" />
+    <Compile Include="GameScenes\PlayScene\Level\ILevel.cs" />
     <Compile Include="Input\Input.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />
@@ -108,6 +109,8 @@
     <Compile Include="GameScenes\PlayScene\Level\Level.cs" />
     <Compile Include="GameScenes\PlayScene\Panel\Panel.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\IScorpion.cs" />
+    <Compile Include="LevelPause.cs" />
+    <Compile Include="LevelPlay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Game\PyramidPanic.cs" />

@@ -30,6 +30,9 @@ namespace PyramidPanic
         private List<Beetle> beetles;
         private Stream stream;
         private Explorer explorer;
+        private ILevel levelState;
+        private LevelPause levelPause;
+        private LevelPlay levelPlay;
 
         //Properties
         public List<Image> Treasures
@@ -48,9 +51,38 @@ namespace PyramidPanic
             get { return this.beetles; }
         }
 
+        public Explorer Explorer
+        {
+            get { return this.explorer; }
+            set { this.explorer = value; }
+        }
+
         public Block[,] Blocks
         {
             get { return this.blocks; }
+        }
+
+        public PyramidPanic Game
+        {
+            get { return this.game; }
+        }
+
+        public ILevel LevelState
+        {
+            get { return this.levelState; }
+            set { this.levelState = value; }
+        }
+
+        public LevelPause LevelPause
+        {
+            get { return this.levelPause; }
+            set { this.levelPause = value; }
+        }
+
+        public LevelPlay LevelPlay
+        {
+            get { return this.levelPlay; }
+            set { this.levelPlay = value; }
         }
 
         //Constructor
@@ -77,6 +109,9 @@ namespace PyramidPanic
             //eeeee
             this.LoadAssets();
             Score.Initialize();
+            this.levelPause = new LevelPause(this);
+            this.levelPlay = new LevelPlay(this);
+            this.levelState = this.levelPlay;
         }
 
         private void LoadAssets()
@@ -159,24 +194,13 @@ namespace PyramidPanic
         //Update method
         public void Update(GameTime gameTime)
         {
-            foreach (Scorpion scorpion in this.scorpions)
-            {
-                scorpion.Update(gameTime);
-            }
-
-            foreach (Beetle beetle in this.beetles)
-            {
-                beetle.Update(gameTime);
-            }
-
-            this.explorer.Update(gameTime);
+            this.levelState.Update(gameTime);
         }
 
         //Draw method
         public void Draw(GameTime gameTime)
         {
             this.background.Draw(gameTime);
-            this.panel.Draw(gameTime);
 
             for ( int row = 0; row < this.blocks.GetLength(1); row++ )
             {
@@ -205,6 +229,8 @@ namespace PyramidPanic
             {
                 this.explorer.Draw(gameTime);
             }
+            this.levelState.Draw(gameTime);
+            this.panel.Draw(gameTime);
         }
     }
 }

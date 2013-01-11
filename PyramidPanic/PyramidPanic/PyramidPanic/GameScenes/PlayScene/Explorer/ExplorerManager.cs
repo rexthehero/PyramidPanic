@@ -83,7 +83,9 @@ namespace PyramidPanic
                 if (explorer.CollisionRectangle.Intersects(scorpion.CollisionRectangle))
                 {
                     Score.Lives--;
-                    level.Scorpions.Remove(scorpion);
+                    level.LevelPause.RemoveIndex = level.Scorpions.IndexOf(scorpion);
+                    level.LevelPause.RemoveType = "Scorpion";
+                    level.LevelState = level.LevelPause;
                     break;
                 }
             }
@@ -96,7 +98,9 @@ namespace PyramidPanic
                 if (explorer.CollisionRectangle.Intersects(beetle.CollisionRectangle))
                 {
                     Score.Lives--;
-                    level.Beetles.Remove(beetle);
+                    level.LevelPause.RemoveIndex = level.Beetles.IndexOf(beetle);
+                    level.LevelPause.RemoveType = "Beetle";
+                    level.LevelState = level.LevelPause;
                     break;
                 }
             }
