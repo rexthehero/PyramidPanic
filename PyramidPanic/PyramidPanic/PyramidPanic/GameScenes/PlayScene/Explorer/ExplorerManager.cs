@@ -83,6 +83,7 @@ namespace PyramidPanic
                 {
                     Score.Lives--;
                     level.Scorpions.Remove(scorpion);
+                    level.LevelState = new LevelPause(level);
                     break;
                 }
             }
