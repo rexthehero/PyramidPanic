@@ -46,29 +46,57 @@ namespace PyramidPanic
             return false;
         }
 
-        public static void PickingUpTreasures()
+
+        public static void CollisionDetectTreasures()
         {
-            foreach (Treasure image in level.Treasures)
+            foreach (Treasure treasure in level.Treasures)
             {
-                if (explorer.CollisionRectangle.Intersects(image.Rectangle))
+                if (explorer.CollisionRectangle.Intersects(treasure.Rectangle))
                 {
-                    level.Treasures.Remove(image);
-                    switch (image.Name)
+                    switch (treasure.Character)
                     {
                         case 'a':
-                            Score.ScorePoints += 10;
+                            Score.Points += 10;
                             break;
                         case 'b':
-                            Score.ScorePoints += 100;
+                            Score.Points += 100;
                             break;
                         case 'c':
-                            Score.Lives += 1;
+                            Score.Lives++;
                             break;
                         case 'd':
-                            Score.ScorePoints += 50;
-                            Score.Scarab += 1;
+                            Score.Scarabs++;
+                            Score.Points += 50;
                             break;
-                    }
+                    }                  
+                    level.Treasures.Remove(treasure);
+                    break;
+                }
+
+            }
+        }
+
+        public static void CollisionDetectScorpions()
+        {
+            foreach (Scorpion scorpion in level.Scorpions)
+            {
+                if (explorer.CollisionRectangle.Intersects(scorpion.CollisionRectangle))
+                {
+                    Score.Lives--;
+                    level.Scorpions.Remove(scorpion);
+                    break;
+                }
+            }
+        }
+
+        public static void CollisionDetectBeetles()
+        {
+            foreach (Beetle beetle in level.Beetles)
+            {
+                if (explorer.CollisionRectangle.Intersects(beetle.CollisionRectangle))
+                {
+                    Score.Lives--;
+                    level.Beetles.Remove(beetle);
                     break;
                 }
             }

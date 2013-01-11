@@ -32,9 +32,10 @@ namespace PyramidPanic
         private Explorer explorer;
 
         //Properties
-        public List<Treasure> Treasures
+        public List<Image> Treasures
         {
             get { return this.treasures; }
+            set { this.treasures = value; }
         }
 
         public List<Scorpion> Scorpions
@@ -75,6 +76,7 @@ namespace PyramidPanic
 
             //eeeee
             this.LoadAssets();
+            Score.Initialize();
         }
 
         private void LoadAssets()
@@ -134,7 +136,7 @@ namespace PyramidPanic
                 case 'y':
                     return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
                 case 'z':
-                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');
+                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.Passable, 'z');
                 case 'B':
                     this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'B');

@@ -117,7 +117,7 @@
     <Compile Include="GameScenes\PlayScene\Scorpion\Scorpion.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkRight.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Right.cs" />
-    <Compile Include="Score.cs" />
+    <Compile Include="GameScenes\PlayScene\Scores\Score.cs" />
     <Compile Include="Treasure.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -126,13 +126,14 @@ namespace PyramidPanic
         public void Update(GameTime gameTime)
         {
             ExplorerManager.Explorer = this;
-            ExplorerManager.PickingUpTreasures();
+            ExplorerManager.CollisionDetectTreasures();
+            ExplorerManager.CollisionDetectScorpions();
+            ExplorerManager.CollisionDetectBeetles();
             this.state.Update(gameTime);
         }
 
         public void Draw(GameTime gameTime)
         {
-            //this.game.SpriteBatch.Draw(this.collisionText, this.CollisionRectangle, Color.White);
             this.state.Draw(gameTime);
         }
     }

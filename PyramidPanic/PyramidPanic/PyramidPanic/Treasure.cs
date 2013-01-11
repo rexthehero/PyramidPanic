@@ -15,17 +15,20 @@ namespace PyramidPanic
     public class Treasure : Image
     {
         //Fields
-        private Char name;
+        private Char character;
 
-        public Char Name
+        //Properties
+        public Char Character
         {
-            get { return this.name; }
+            get { return this.character; }
+            set { this.character = value; }
         }
-        
-        public Treasure(Char name, PyramidPanic game, string pathName, Vector2 position)
-            : base(game, pathName, position)
+
+        //Constructor
+        public Treasure(Char character, PyramidPanic game, string pathName, Vector2 position)  
+            :base(game, pathName, position)
         {
-            this.name = name;
+            this.character = character;
         }
     }
 }
