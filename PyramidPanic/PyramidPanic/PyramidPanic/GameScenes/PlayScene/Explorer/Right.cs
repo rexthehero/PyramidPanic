@@ -42,7 +42,7 @@ namespace PyramidPanic
             }
             if (Input.DetectKeyUp(Keys.Right))
             {
-<                float modulo = (this.explorer.Position.X >= 0) ?
+                float modulo = (this.explorer.Position.X >= 0) ?
                                 this.explorer.Position.X % 32 :
                                 32 + this.explorer.Position.X % 32;
                 if (modulo >= (32f - this.explorer.Speed))

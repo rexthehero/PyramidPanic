@@ -19,8 +19,6 @@ namespace PyramidPanic
         private Vector2 position;
         private Rectangle rectangle, collisionRectangle;
         private IScorpion state;
-        private WalkLeft walkLeft;
-        private WalkRight walkRight;
         private float speed;
         private float right, left;
         private WalkLeft walkLeft;

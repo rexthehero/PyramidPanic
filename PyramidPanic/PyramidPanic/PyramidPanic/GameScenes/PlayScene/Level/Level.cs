@@ -23,7 +23,7 @@ namespace PyramidPanic
         private const int GRIDWIDTH = 32;
         private const int GRIDHEIGHT = 32;
         private Image background;
-        private List<Treasure> treasures;
+        private List<Image> treasures;
         private Panel panel;
         //private Scorpion scorpion;
         private List<Scorpion> scorpions;
@@ -81,7 +81,7 @@ namespace PyramidPanic
 
         private void LoadAssets()
         {
-            this.treasures = new List<Treasure>();
+            this.treasures = new List<Image>();
             this.scorpions = new List<Scorpion>();
             this.beetles = new List<Beetle>();
             this.panel = new Panel(this.game, new Vector2(0f, 448f));

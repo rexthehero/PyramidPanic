@@ -30,13 +30,13 @@ namespace PyramidPanic
         }
 
         //Dit is een overload van de constructor van de Idle class.
-        /*
+        
         public Idle(Explorer explorer, float angle) : base(explorer)
         {
             this.explorer = explorer;
             this.angle = angle;
         }
-         */
+        
 
         //Update
         public override void Update(GameTime gameTime)
