@@ -28,6 +28,18 @@ namespace PyramidPanic
             set { explorer = value; }
         }
 
+        public static bool WalkOutOfLevel()
+        {
+            if ((explorer.Position.X > 640))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public static bool CollisionDetectionWalls()
         {
             for ( int i = 0; i < level.Blocks.GetLength(0); i++)

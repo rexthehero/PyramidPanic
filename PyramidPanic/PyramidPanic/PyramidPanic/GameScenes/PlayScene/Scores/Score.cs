@@ -15,9 +15,10 @@ namespace PyramidPanic
     {
         //Static Fields
         private static int points;
-        private static int lives;
+        private static int lives = 3;
         private static int scarabs;
         private static bool doorsAreClosed;
+        private static int minimalPointsForNextLevel = 300;
 
         public static int Points
         {
@@ -43,18 +44,27 @@ namespace PyramidPanic
             set { doorsAreClosed = value; }
         }
 
+        public static int MinimalPointsForNextLevel
+        {
+            get { return minimalPointsForNextLevel; }
+            set { minimalPointsForNextLevel = value; }
+        }
+
         public static void Initialize()
         {
-            points = 0;
-            scarabs = 0;
-            lives = 3;
             doorsAreClosed = true;
         }
 
         public static bool openDoors()
         {
             //ternary
-            return (points > 500) ? true : false;
+            return (points > minimalPointsForNextLevel) ? true : false;
+        }
+
+        public static bool isDead()
+        {
+            //ternary
+            return (lives < 1) ? true : false;
         }
     }
 }

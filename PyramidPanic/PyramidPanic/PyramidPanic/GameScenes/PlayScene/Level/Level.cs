@@ -34,6 +34,8 @@ namespace PyramidPanic
         private LevelPause levelPause;
         private LevelPlay levelPlay;
         private LevelDoorOpen levelDoorOpen;
+        private LevelGameOver levelGameOver;
+        private LevelNextLevel levelNextLevel;
 
         //Properties
         public List<Image> Treasures
@@ -92,6 +94,18 @@ namespace PyramidPanic
             set { this.levelDoorOpen = value; }
         }
 
+        public LevelGameOver LevelGameOver
+        {
+            get { return this.levelGameOver; }
+            set { this.levelGameOver = value; }
+        }
+
+        public LevelNextLevel LevelNextLevel
+        {
+            get { return this.levelNextLevel; }
+            set { this.levelNextLevel = value; }
+        }
+
         //Constructor
         public Level(PyramidPanic game, int levelIndex)
         {
@@ -104,8 +118,11 @@ namespace PyramidPanic
             Console.WriteLine("File Size: " + stream.Length);
             stream.Close();
             */
-            this.stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\0.txt");
-            this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+
+            this.levelPath = @"Content\PlaySceneAssets\Levels\" + levelIndex + ".txt";
+            this.stream = TitleContainer.OpenStream(this.levelPath);
+            //this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+            //this.levelPath = @"Content\PlaySceneAssets\Levels\" + levelIndex + ".txt";
 
             //eeee
             //IAsyncResult result = StorageDevice.BeginShowSelector(
@@ -115,10 +132,13 @@ namespace PyramidPanic
 
             //eeeee
             this.LoadAssets();
+            ExplorerManager.Explorer = this.explorer;
             Score.Initialize();
             this.levelPause = new LevelPause(this);
             this.levelPlay = new LevelPlay(this);
             this.levelDoorOpen = new LevelDoorOpen(this);
+            this.levelGameOver = new LevelGameOver(this);
+            this.levelNextLevel = new LevelNextLevel(this);
             this.levelState = this.levelPlay;
         }
 
