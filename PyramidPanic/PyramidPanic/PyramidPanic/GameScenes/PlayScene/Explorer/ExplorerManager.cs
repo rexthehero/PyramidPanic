@@ -67,7 +67,22 @@ namespace PyramidPanic
                             Score.Scarabs++;
                             Score.Points += 50;
                             break;
-                    }                  
+                    }
+                    if (Score.openDoors() && Score.DoorsAreClosed)
+                    {
+                        for (int i = 0; i < level.Blocks.GetLength(0); i++)
+                        {
+                            for (int j = 0; j < level.Blocks.GetLength(1); j++)
+                            {
+                                if (level.Blocks[i,j].CharItem == 'z')
+                                {
+                                    level.LevelState = level.LevelDoorOpen;
+                                    level.Blocks[i, j].BlockCollision = BlockCollision.Passable;
+                                }
+                            }
+                        }
+                        Score.DoorsAreClosed = false;
+                    }
                     level.Treasures.Remove(treasure);
                     break;
                 }

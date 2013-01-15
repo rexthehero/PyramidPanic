@@ -33,6 +33,7 @@ namespace PyramidPanic
         private ILevel levelState;
         private LevelPause levelPause;
         private LevelPlay levelPlay;
+        private LevelDoorOpen levelDoorOpen;
 
         //Properties
         public List<Image> Treasures
@@ -85,6 +86,12 @@ namespace PyramidPanic
             set { this.levelPlay = value; }
         }
 
+        public LevelDoorOpen LevelDoorOpen
+        {
+            get { return this.levelDoorOpen; }
+            set { this.levelDoorOpen = value; }
+        }
+
         //Constructor
         public Level(PyramidPanic game, int levelIndex)
         {
@@ -111,6 +118,7 @@ namespace PyramidPanic
             Score.Initialize();
             this.levelPause = new LevelPause(this);
             this.levelPlay = new LevelPlay(this);
+            this.levelDoorOpen = new LevelDoorOpen(this);
             this.levelState = this.levelPlay;
         }
 
@@ -171,7 +179,7 @@ namespace PyramidPanic
                 case 'y':
                     return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
                 case 'z':
-                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.Passable, 'z');
+                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');
                 case 'B':
                     this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'B');

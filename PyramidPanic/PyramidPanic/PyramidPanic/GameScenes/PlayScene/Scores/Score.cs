@@ -17,6 +17,7 @@ namespace PyramidPanic
         private static int points;
         private static int lives;
         private static int scarabs;
+        private static bool doorsAreClosed;
 
         public static int Points
         {
@@ -36,11 +37,24 @@ namespace PyramidPanic
             set { scarabs = value; }
         }
 
+        public static bool DoorsAreClosed
+        {
+            get { return doorsAreClosed; }
+            set { doorsAreClosed = value; }
+        }
+
         public static void Initialize()
         {
             points = 0;
             scarabs = 0;
             lives = 3;
+            doorsAreClosed = true;
+        }
+
+        public static bool openDoors()
+        {
+            //ternary
+            return (points > 500) ? true : false;
         }
     }
 }
