@@ -171,7 +171,7 @@ namespace PyramidPanic
                 case 'y':
                     return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
                 case 'z':
-                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.Passable, 'z');
+                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');
                 case 'B':
                     this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'B');

@@ -109,8 +109,8 @@
     <Compile Include="GameScenes\PlayScene\Level\Level.cs" />
     <Compile Include="GameScenes\PlayScene\Panel\Panel.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\IScorpion.cs" />
-    <Compile Include="LevelPause.cs" />
-    <Compile Include="LevelPlay.cs" />
+    <Compile Include="GameScenes\PlayScene\Level\LevelPause.cs" />
+    <Compile Include="GameScenes\PlayScene\Level\LevelPlay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Game\PyramidPanic.cs" />

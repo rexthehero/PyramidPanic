@@ -42,5 +42,10 @@ namespace PyramidPanic
             scarabs = 0;
             lives = 3;
         }
+
+        public static bool openDoors()
+        {
+            return ( points > 500 ) ? true : false;
+        }
     }
 }

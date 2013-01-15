@@ -21,7 +21,7 @@ namespace PyramidPanic
         private int pauseTimeOver = 3;
         private float timer = 0;
         private int removeIndex = -1;
-        private string removeType;
+        private string removeType = "None";
 
         //Properties
         public int RemoveIndex
@@ -59,6 +59,7 @@ namespace PyramidPanic
                 level.Explorer.Position = new Vector2(9*32f, 6*32f);
                 level.Explorer.State = new Idle(level.Explorer);
                 this.removeIndex = -1;
+                this.removeType = "None";
                 this.level.LevelState = level.LevelPlay;
                 this.timer = 0f;
             }

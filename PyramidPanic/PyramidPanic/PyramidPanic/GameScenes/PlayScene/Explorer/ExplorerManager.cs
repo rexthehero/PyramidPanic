@@ -70,6 +70,20 @@ namespace PyramidPanic
                             break;
                     }                  
                     level.Treasures.Remove(treasure);
+                    if (Score.openDoors())
+                    {
+                        for (int i = 0; i < level.Blocks.GetLength(0); i++)
+                        {
+                            for (int j = 0; j < level.Blocks.GetLength(1); j++)
+                            {
+                                if (level.Blocks[i, j].CharItem == 'z')
+                                {
+                                    level.LevelState = level.LevelPause;
+                                    level.Blocks[i, j].BlockCollision = BlockCollision.Passable;
+                                }
+                            }
+                        }    
+                    }
                     break;
                 }
 

@@ -27,11 +27,18 @@ namespace PyramidPanic
         public BlockCollision BlockCollision
         {
             get { return this.blockCollision; }
+            set { this.blockCollision = value; }
         }
 
         public Rectangle Rectangle
         {
             get { return this.rectangle; }
+        }
+
+        public Char CharItem
+        {
+            get { return this.charItem; }
+            set { this.charItem = value; }
         }
         
         //Constructor
