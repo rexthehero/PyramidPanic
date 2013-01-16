@@ -83,10 +83,6 @@
       <Name>0</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="PlaySceneAssets\Levels\1.txt">
-      <Name>1</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PlaySceneAssets\Blocks\Block.png">
@@ -169,12 +165,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PlaySceneAssets\Levels\2.txt">
-      <Name>2</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="PlaySceneAssets\Scorpion\Scorpion.png">
       <Name>Scorpion</Name>
       <Importer>TextureImporter</Importer>
@@ -201,12 +191,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="PlaySceneAssets\Levels\3.txt">
-      <Name>3</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PlaySceneAssets\Overlay\overlay.png">
@@ -242,6 +226,66 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\10.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>10</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>2</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>3</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>4</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>5</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\6.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>6</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\7.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>7</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\8.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>8</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\9.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>9</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>1</Name>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

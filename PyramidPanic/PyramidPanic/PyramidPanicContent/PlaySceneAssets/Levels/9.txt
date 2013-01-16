@@ -1,11 +1,11 @@
 @xwxyzxyxywzxyxwxyxx
-y..aa..............w
+y..aaaaaaaaa.......w
 xc.ccccccScccc.w...x
-w.w.....wddddd.....y
-z.B.aaaa..aaa......z
-x...ywwywyw....B...x
-w.w......E..wS.....y
-w....wwwwww.ccc....w
+w.w.....wddddd.w...y
+z.B.aaaa..aaa..x...z
+x...ywwywyw..wxB...x
+w.w......E..wS...xxy
+w....wwBBww.ccc....w
 x.bbbbbbbS.....w...x
 y..dddB.....bbbb...z
 w..S....w..........y

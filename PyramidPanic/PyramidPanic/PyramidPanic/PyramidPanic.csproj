@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="GameScenes\GameOverScene\GameOverScene.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\ExplorerManager.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Down.cs" />
     <Compile Include="GameScenes\PlayScene\Explorer\Up.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="GameScenes\PlayScene\Beetle\WalkDown.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\WalkUp.cs" />
     <Compile Include="GameScenes\PlayScene\Block\Block.cs" />
+    <Compile Include="GameScenes\PlayScene\Level\LevelEndGame.cs" />
     <Compile Include="GameScenes\PlayScene\Level\LevelNextLevel.cs" />
     <Compile Include="GameScenes\PlayScene\Level\LevelGameOver.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\ScorpionManager.cs" />

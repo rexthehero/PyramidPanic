@@ -133,7 +133,6 @@ namespace PyramidPanic
             //eeeee
             this.LoadAssets();
             ExplorerManager.Explorer = this.explorer;
-            Score.Initialize();
             this.levelPause = new LevelPause(this);
             this.levelPlay = new LevelPlay(this);
             this.levelDoorOpen = new LevelDoorOpen(this);

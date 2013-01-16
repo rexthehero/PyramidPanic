@@ -18,7 +18,7 @@ namespace PyramidPanic
         //Fields
         private Level level;
         private Image gameOver;
-        private int pauseTimeOver = 6;
+        private int pauseTimeOver = 2;
         private float timer = 0;
         
         //Constructor
@@ -33,8 +33,7 @@ namespace PyramidPanic
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (this.timer > this.pauseTimeOver)
             {
-                PlayScene.LevelNumber++;
-                Score.MinimalPointsForNextLevel += 500;
+                Score.MinimalPointsForNextLevel += 500; 
                 level.Game.GameState = new PlayScene(level.Game);
                 this.timer = 0;
             }

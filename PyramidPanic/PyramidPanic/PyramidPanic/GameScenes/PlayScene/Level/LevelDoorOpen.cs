@@ -18,7 +18,7 @@ namespace PyramidPanic
         //Fields
         private Level level;
         private Image doorsAreOpen;
-        private int pauseTimeOver = 2;
+        private int pauseTimeOver = 1;
         private float timer = 0;
         
         //Constructor

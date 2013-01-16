@@ -13,34 +13,37 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace PyramidPanic
 {
-    public class LevelGameOver : ILevel
+    public class LevelEndGame : ILevel
     {
-        //Fields
+        //Field
         private Level level;
-        private Image gameOver;
-        private int pauseTimeOver = 1;
+        private Image background, congratulations;
+        private int pauseTimeOver = 5;
         private float timer = 0;
-        
+
         //Constructor
-        public LevelGameOver(Level level)
-        {
+        public LevelEndGame(Level level)
+        {            
             this.level = level;
-            this.gameOver = new Image(level.Game, @"PlaySceneAssets\Overlay\GameOverOverlay", Vector2.Zero);
-        }
-        
+            this.background = new Image(this.level.Game, @"PlaySceneAssets\Background\Background2", Vector2.Zero);
+            this.congratulations = new Image(this.level.Game, @"PlaySceneAssets\Background\Congratulation", new Vector2(120f,100f));
+        }        
+
         public void Update(GameTime gameTime)
         {
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (this.timer > this.pauseTimeOver)
             {
-                level.Game.GameState = new StartScene(level.Game);
-                this.timer = 0;
+                level.Game.Exit();
+                this.timer = 0f;
             }
         }
 
         public void Draw(GameTime gameTime)
         {
-            this.gameOver.Draw(gameTime);
+            this.level.Game.GraphicsDevice.Clear(Color.Red);
+            this.background.Draw(gameTime);
+            this.congratulations.Draw(gameTime);
         }
     }
 }

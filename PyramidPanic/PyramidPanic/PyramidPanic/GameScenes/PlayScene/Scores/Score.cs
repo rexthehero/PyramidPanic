@@ -17,8 +17,8 @@ namespace PyramidPanic
         private static int points;
         private static int lives = 3;
         private static int scarabs;
-        private static bool doorsAreClosed;
-        private static int minimalPointsForNextLevel = 300;
+        private static bool doorsAreClosed = true;
+        private static int minimalPointsForNextLevel;
 
         public static int Points
         {
@@ -52,14 +52,18 @@ namespace PyramidPanic
 
         public static void Initialize()
         {
+            points = 0;
+            lives = 3;
+            scarabs = 0;            
             doorsAreClosed = true;
+            minimalPointsForNextLevel = 500;
         }
 
         public static bool openDoors()
         {
             //ternary
             return (points > minimalPointsForNextLevel) ? true : false;
-        }
+         }
 
         public static bool isDead()
         {

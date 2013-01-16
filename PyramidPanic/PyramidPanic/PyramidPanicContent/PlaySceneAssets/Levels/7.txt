@@ -1,8 +1,8 @@
 @xwxyzxyxywzxyxwxyxx
-y..aa..............w
-xc.ccccccScccc.w...x
+y..................w
+xc.wwwwwwxwxwx.w...x
 w.w.....wddddd.....y
-z.B.aaaa..aaa......z
+z.B.awwxxaaa.......z
 x...ywwywyw....B...x
 w.w......E..wS.....y
 w....wwwwww.ccc....w

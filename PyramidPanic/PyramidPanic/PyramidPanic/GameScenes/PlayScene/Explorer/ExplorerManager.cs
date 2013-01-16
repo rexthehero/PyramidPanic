@@ -30,7 +30,10 @@ namespace PyramidPanic
 
         public static bool WalkOutOfLevel()
         {
-            if ((explorer.Position.X > 640))
+            if ((explorer.Position.X > 639) ||
+                (explorer.Position.X < -31) ||
+                (explorer.Position.Y > 447) ||
+                (explorer.Position.Y < -31))
             {
                 return true;
             }
