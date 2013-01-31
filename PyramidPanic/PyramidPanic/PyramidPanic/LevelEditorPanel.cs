@@ -17,6 +17,8 @@ namespace PyramidPanic
         private LevelEditorScene levelEditorScene;
         private Vector2 position;
         private Image background;
+        private List<Image> levelEditorAssets;
+        private SpriteFont Arial;
 
         //Properties
 
@@ -37,19 +39,43 @@ namespace PyramidPanic
         //LoadContent
         private void LoadContent()
         {
-            this.background = new Image(this.position, @""
+            this.Arial = this.levelEditorScene.Game.Content.Load<SpriteFont>(@"PlaySceneAssets\Fonts\Arial");
+            this.levelEditorAssets = new List<Image>();
+            this.levelEditorAssets.Add(
+                new Image(this.levelEditorScene.Game, @"LevelEditorAssets\Left",
+                    this.position + new Vector2(2.5f * 32f, 0f)));
+            this.levelEditorAssets.Add(
+                new Image(this.levelEditorScene.Game, @"LevelEditorAssets\Right",
+                    this.position + new Vector2(4.5f * 32f, 0f)));
+            this.background = new Image(this.levelEditorScene.Game, @"LevelEditorAssets\Panel", this.position);
         }
 
         //Update
         public void Update(GameTime gameTime)
         {
-
+            foreach (Image image in this.levelEditorAssets)
+            {
+                if (image.Rectangle.Intersects(Input.MouseRectangle()))
+                {
+                    int indexOfImage = this.levelEditorAssets.IndexOf(image);
+                    this.levelEditorScene.Game.Exit();
+                }
+            }
         }
 
         //Draw
         public void Draw(GameTime gameTime)
         {
-
+            this.background.Draw(gameTime);
+            foreach (Image image in this.levelEditorAssets)
+            {
+                image.Draw(gameTime);
+            }
+            //Ternary
+            float levelIndexOffset = (levelEditorScene.LevelIndex > 9) ? 3.4f : 3.7f;
+            this.levelEditorScene.Game.SpriteBatch.DrawString(this.Arial, 
+                this.levelEditorScene.LevelIndex.ToString(), this.position +
+                    new Vector2(levelIndexOffset * 32f, -3f), Color.Yellow);
         }
     }
 }

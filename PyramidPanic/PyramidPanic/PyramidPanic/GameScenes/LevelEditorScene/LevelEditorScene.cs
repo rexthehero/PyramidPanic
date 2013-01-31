@@ -16,7 +16,20 @@ namespace PyramidPanic
         //Fields
         private PyramidPanic game;
         private Level level;
-        private int levelIndex = 10;
+        private int levelIndex = 8;
+        private LevelEditorPanel levelEditorPanel;
+        
+
+        //Properties
+        public PyramidPanic Game
+        {
+            get { return this.game; }
+        }
+
+        public int LevelIndex
+        {
+            get { return this.levelIndex; }
+        }
 
         //Constructor
         public LevelEditorScene(PyramidPanic game)
@@ -34,6 +47,7 @@ namespace PyramidPanic
         //LoadContent
         public void LoadContent()
         {
+            this.levelEditorPanel = new LevelEditorPanel(this, new Vector2(0f, 448f));
             this.level = new Level(this.game, this.levelIndex);
         }
 
@@ -44,6 +58,7 @@ namespace PyramidPanic
             {
                 this.game.GameState = new StartScene(this.game);
             }
+            this.levelEditorPanel.Update(gameTime);
         }
 
         //Draw
@@ -51,6 +66,7 @@ namespace PyramidPanic
         {
             this.game.GraphicsDevice.Clear(Color.Olive);
             this.level.Draw(gameTime);
+            this.levelEditorPanel.Draw(gameTime);
         }
     }
 }
