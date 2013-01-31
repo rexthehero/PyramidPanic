@@ -69,11 +69,13 @@ namespace PyramidPanic
                                 //ternary
                                 this.levelEditorScene.LevelIndex = (this.levelEditorScene.LevelIndex > 0) ?
                                     this.levelEditorScene.LevelIndex-1 : 0;
+                                this.levelEditorScene.LoadLevel();
                                 break;
                             case 1:
                                 //ternary
                                 this.levelEditorScene.LevelIndex = (this.levelEditorScene.LevelIndex < 10) ?
                                     this.levelEditorScene.LevelIndex + 1 : 10;
+                                this.levelEditorScene.LoadLevel();
                                 break;
                             default:
                                 break;

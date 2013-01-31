@@ -89,7 +89,7 @@ namespace PyramidPanic
             this.collisionTexture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\collisionTexture");
             this.position = position;
             this.speed = speed;
-            this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width/4, this.texture.Height);
+            this.rectangle = new Rectangle((int)this.position.X + 16, (int)this.position.Y + 16, this.texture.Width/4, this.texture.Height);
             this.collisionRectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
             this.state = new WalkDown(this);
         }

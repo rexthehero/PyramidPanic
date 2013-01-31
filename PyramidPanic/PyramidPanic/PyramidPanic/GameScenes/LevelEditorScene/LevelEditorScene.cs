@@ -16,7 +16,7 @@ namespace PyramidPanic
         //Fields
         private PyramidPanic game;
         private Level level;
-        private int levelIndex = 8;
+        private int levelIndex = 0;
         private LevelEditorPanel levelEditorPanel;
         
 
@@ -49,6 +49,11 @@ namespace PyramidPanic
         public void LoadContent()
         {
             this.levelEditorPanel = new LevelEditorPanel(this, new Vector2(0f, 448f));
+            this.LoadLevel();
+        }
+
+        public void LoadLevel()
+        {
             this.level = new Level(this.game, this.levelIndex);
         }
 
