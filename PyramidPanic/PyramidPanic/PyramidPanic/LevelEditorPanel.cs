@@ -57,8 +57,28 @@ namespace PyramidPanic
             {
                 if (image.Rectangle.Intersects(Input.MouseRectangle()))
                 {
+                    //Bepaal om welk image het gaat in list en geef het indexnummer
                     int indexOfImage = this.levelEditorAssets.IndexOf(image);
-                    this.levelEditorScene.Game.Exit();
+                    
+                    //Detecteer of er linksgeklikt wordt op muisknop
+                    if (Input.MouseEdgeDetectPressLeft())
+                    {
+                        switch (indexOfImage)
+                        {
+                            case 0:
+                                //ternary
+                                this.levelEditorScene.LevelIndex = (this.levelEditorScene.LevelIndex > 0) ?
+                                    this.levelEditorScene.LevelIndex-1 : 0;
+                                break;
+                            case 1:
+                                //ternary
+                                this.levelEditorScene.LevelIndex = (this.levelEditorScene.LevelIndex < 10) ?
+                                    this.levelEditorScene.LevelIndex + 1 : 10;
+                                break;
+                            default:
+                                break;
+                        }                        
+                    }
                 }
             }
         }

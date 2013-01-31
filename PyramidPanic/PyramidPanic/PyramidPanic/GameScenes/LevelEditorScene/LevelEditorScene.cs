@@ -29,6 +29,7 @@ namespace PyramidPanic
         public int LevelIndex
         {
             get { return this.levelIndex; }
+            set { this.levelIndex = value; }
         }
 
         //Constructor
