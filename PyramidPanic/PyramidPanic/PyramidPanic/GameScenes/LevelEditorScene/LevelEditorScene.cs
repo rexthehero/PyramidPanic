@@ -65,6 +65,14 @@ namespace PyramidPanic
                 this.game.GameState = new StartScene(this.game);
             }
             this.levelEditorPanel.Update(gameTime);
+            if (Input.MouseEdgeDetectPressLeft() &&
+                 Input.MousePosition().X < 640f &&
+                 Input.MousePosition().X > 0f &&
+                 Input.MousePosition().Y > 0f &&
+                 Input.MousePosition().Y < 448f)
+            {
+                this.game.Exit();
+            }
         }
 
         //Draw
