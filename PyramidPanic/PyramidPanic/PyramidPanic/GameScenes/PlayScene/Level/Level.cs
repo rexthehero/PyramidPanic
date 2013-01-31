@@ -206,7 +206,7 @@ namespace PyramidPanic
                     this.scorpions.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'S');
                 case 'E':
-                    this.explorer = new Explorer(this.game, new Vector2(x, y), 2.0f);
+                    this.explorer = new  Explorer (this.game, new Vector2(x, y), 2.0f);
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'E');
                 case '@':
                     this.background = new Image(this.game, @"PlaySceneAssets\Background\Background2", new Vector2(x, y));

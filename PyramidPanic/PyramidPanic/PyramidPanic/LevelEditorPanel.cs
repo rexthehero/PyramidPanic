@@ -11,47 +11,45 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class LevelEditorScene : IStateGame
+    public class LevelEditorPanel
     {
         //Fields
-        private PyramidPanic game;
-        private Level level;
-        private int levelIndex = 10;
+        private LevelEditorScene levelEditorScene;
+        private Vector2 position;
+        private Image background;
+
+        //Properties
 
         //Constructor
-        public LevelEditorScene(PyramidPanic game)
+        public LevelEditorPanel(LevelEditorScene levelEditorScene, Vector2 position)
         {
-            this.game = game;
+            this.levelEditorScene = levelEditorScene;
+            this.position = position;
             this.Initialize();
         }
 
         //Initialize
-        public void Initialize()
+        private void Initialize()
         {
             this.LoadContent();
         }
 
         //LoadContent
-        public void LoadContent()
+        private void LoadContent()
         {
-            this.level = new Level(this.game, this.levelIndex);
+            this.background = new Image(this.position, @""
         }
 
         //Update
         public void Update(GameTime gameTime)
         {
-            if (Input.EdgeDetectKeyDown(Keys.Escape) || Input.EdgeDetectButtonDown(Buttons.B))
-            {
-                this.game.GameState = new StartScene(this.game);
-            }
+
         }
 
         //Draw
         public void Draw(GameTime gameTime)
         {
-            this.game.GraphicsDevice.Clear(Color.Olive);
-            this.level.Draw(gameTime);
+
         }
     }
 }
-
