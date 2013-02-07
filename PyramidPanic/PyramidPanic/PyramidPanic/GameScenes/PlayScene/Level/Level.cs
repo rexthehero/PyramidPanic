@@ -36,6 +36,7 @@ namespace PyramidPanic
         private LevelDoorOpen levelDoorOpen;
         private LevelGameOver levelGameOver;
         private LevelNextLevel levelNextLevel;
+        private int levelIndex;
 
         //Properties
         public List<Image> Treasures
@@ -106,10 +107,21 @@ namespace PyramidPanic
             set { this.levelNextLevel = value; }
         }
 
+        public int LevelIndex
+        {
+            get { return this.levelIndex; }
+        }
+
+        public string LevelPath
+        {
+            get { return this.levelPath; }
+        }
+
         //Constructor
         public Level(PyramidPanic game, int levelIndex)
         {
             this.game = game;
+            this.levelIndex = levelIndex;
             /*
             System.IO.Stream stream = TitleContainer.OpenStream(@"Content\PlaySceneAssets\Levels\0.txt");
             System.IO.StreamReader sreader = new System.IO.StreamReader(stream);
@@ -139,6 +151,7 @@ namespace PyramidPanic
             this.levelGameOver = new LevelGameOver(this);
             this.levelNextLevel = new LevelNextLevel(this);
             this.levelState = this.levelPlay;
+            this.stream.Close();
         }
 
         private void LoadAssets()

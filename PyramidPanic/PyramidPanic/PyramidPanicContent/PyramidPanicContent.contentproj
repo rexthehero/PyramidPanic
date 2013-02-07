@@ -287,7 +287,13 @@
       <Name>1</Name>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="LevelEditorAssets\Button_save.png">
+      <Name>Button_save</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="LevelEditorAssets\Beetle.png">
       <Name>Beetle</Name>
@@ -296,11 +302,6 @@
     </Compile>
     <Compile Include="LevelEditorAssets\Block_vert.png">
       <Name>Block_vert</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="LevelEditorAssets\Button_load.png">
-      <Name>Button_load</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -39,6 +39,11 @@ namespace PyramidPanic
         {
             get { return this.charItem; }
         }
+
+        public Vector2 Position
+        {
+            get { return this.position; }
+        }
         
         //Constructor
         public Block(PyramidPanic game, string blockName,
