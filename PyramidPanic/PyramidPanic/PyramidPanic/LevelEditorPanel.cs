@@ -143,6 +143,7 @@ namespace PyramidPanic
                Input.MousePosition().Y < 448f)
             {
                 Console.WriteLine(this.levelEditorAssetsIndex);
+                this.RemoveAsset();
                 switch (this.levelEditorAssetsIndex)
                 {
                     case 0:
@@ -173,35 +174,19 @@ namespace PyramidPanic
                         break;
                     case 7:
                         this.PlaceBlock(@"Transparant", 'c'); 
-                        this.levelEditorScene.Level.Treasures.Add(new Treasure('c',
-                                                                               this.levelEditorScene.Game,
-                                                                               @"PlaySceneAssets\Treasures\Potion",
-                                                                  new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                                              ((int)Input.MousePosition().Y / 32) * 32f)));
+                        this.addTreasure('c',@"PlaySceneAssets\Treasures\Potion");
                         break;
                     case 8:
-                        this.PlaceBlock(@"Transparant", 'd');                        
-                        this.levelEditorScene.Level.Treasures.Add(new Treasure('d',
-                                                                               this.levelEditorScene.Game,
-                                                                               @"PlaySceneAssets\Treasures\Scarab",
-                                                                  new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                                              ((int)Input.MousePosition().Y / 32) * 32f)));
+                        this.PlaceBlock(@"Transparant", 'd');
+                        this.addTreasure('d', @"PlaySceneAssets\Treasures\Scarab");
                         break;
                     case 9:
                         this.PlaceBlock(@"Transparant", 'a');
-                        this.levelEditorScene.Level.Treasures.Add(new Treasure('a',
-                                                                               this.levelEditorScene.Game,
-                                                                               @"PlaySceneAssets\Treasures\Treasure1",
-                                                                  new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                                              ((int)Input.MousePosition().Y / 32) * 32f)));
+                        this.addTreasure('a', @"PlaySceneAssets\Treasures\Treasure1");
                         break;
                     case 10:
-                        this.PlaceBlock(@"Transparant", 'b'); 
-                        this.levelEditorScene.Level.Treasures.Add(new Treasure('b',
-                                                                               this.levelEditorScene.Game,
-                                                                               @"PlaySceneAssets\Treasures\Treasure2",
-                                                                  new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                                              ((int)Input.MousePosition().Y / 32) * 32f)));
+                        this.PlaceBlock(@"Transparant", 'b');
+                        this.addTreasure('b', @"PlaySceneAssets\Treasures\Treasure2");
                         break;
                     case 11:
                         this.PlaceBlock(@"Transparant", 'E'); 
@@ -224,6 +209,36 @@ namespace PyramidPanic
                                                  ((int)Input.MousePosition().Y / 32) * 32f),
                                      BlockCollision.NotPassable,
                                      charItem);
+        }
+
+        private void addTreasure(Char charItem, string name)
+        {
+            this.levelEditorScene.Level.Treasures.Add(new Treasure(charItem,
+                                                                   this.levelEditorScene.Game,
+                                                                   name,
+                                                                   new Vector2(((int)Input.MousePosition().X / 32) * 32f,
+                                                                              ((int)Input.MousePosition().Y / 32) * 32f)));
+        }
+
+        private void RemoveAsset()
+        {
+            foreach (Scorpion scorpion in this.levelEditorScene.Level.Scorpions)
+            {
+                if (scorpion.Position == new Vector2(((int)Input.MousePosition().X/32)*32, ((int)Input.MousePosition().Y/32)*32))
+                {
+                    this.levelEditorScene.Level.Scorpions.Remove(scorpion);
+                    break;
+                }
+            }
+
+            foreach (Treasure treasure in this.levelEditorScene.Level.Treasures)
+            {
+                if (treasure.Position == new Vector2(((int)Input.MousePosition().X / 32) * 32, ((int)Input.MousePosition().Y / 32) * 32))
+                {
+                    this.levelEditorScene.Level.Treasures.Remove(treasure);
+                    break;  
+                }
+            }
         }
 
         //Draw
