@@ -146,75 +146,33 @@ namespace PyramidPanic
                 switch (this.levelEditorAssetsIndex)
                 {
                     case 0:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Block",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'w');
+                        this.PlaceBlock(@"Block", 'w');
                         break;                   
                     case 1:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X/32, (int)Input.MousePosition().Y/32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Door",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'z');
+                        this.PlaceBlock(@"Door", 'z');
                         break;
                     case 2:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Wall1",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'x');
+                        this.PlaceBlock(@"Wall1", 'x');
                         break;
                     case 3:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Wall2",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'y');
+                        this.PlaceBlock(@"Wall2", 'y'); 
                         break;
                     case 4:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Transparant",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'B');
+                        this.PlaceBlock(@"Transparant", 'B'); 
                         this.levelEditorScene.Level.Beetles.Add(new Beetle(this.levelEditorScene.Game,
                                                                 new Vector2(((int)Input.MousePosition().X / 32) * 32f,
                                                                             ((int)Input.MousePosition().Y / 32) * 32f),
                                                                 2.0f));
                         break;
                     case 5:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Transparant",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'S');
+                        this.PlaceBlock(@"Transparant", 'S'); 
                         this.levelEditorScene.Level.Scorpions.Add(new Scorpion(this.levelEditorScene.Game,
                                                                   new Vector2(((int)Input.MousePosition().X / 32) * 32f,
                                                                             ((int)Input.MousePosition().Y / 32) * 32f),
                                                                   2.0f));
                         break;
                     case 7:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Transparant",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'c');
+                        this.PlaceBlock(@"Transparant", 'c'); 
                         this.levelEditorScene.Level.Treasures.Add(new Treasure('c',
                                                                                this.levelEditorScene.Game,
                                                                                @"PlaySceneAssets\Treasures\Potion",
@@ -222,13 +180,7 @@ namespace PyramidPanic
                                                                               ((int)Input.MousePosition().Y / 32) * 32f)));
                         break;
                     case 8:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Transparant",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'd');
+                        this.PlaceBlock(@"Transparant", 'd');                        
                         this.levelEditorScene.Level.Treasures.Add(new Treasure('d',
                                                                                this.levelEditorScene.Game,
                                                                                @"PlaySceneAssets\Treasures\Scarab",
@@ -236,13 +188,7 @@ namespace PyramidPanic
                                                                               ((int)Input.MousePosition().Y / 32) * 32f)));
                         break;
                     case 9:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Transparant",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'a');
+                        this.PlaceBlock(@"Transparant", 'a');
                         this.levelEditorScene.Level.Treasures.Add(new Treasure('a',
                                                                                this.levelEditorScene.Game,
                                                                                @"PlaySceneAssets\Treasures\Treasure1",
@@ -250,13 +196,7 @@ namespace PyramidPanic
                                                                               ((int)Input.MousePosition().Y / 32) * 32f)));
                         break;
                     case 10:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Transparant",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'b');
+                        this.PlaceBlock(@"Transparant", 'b'); 
                         this.levelEditorScene.Level.Treasures.Add(new Treasure('b',
                                                                                this.levelEditorScene.Game,
                                                                                @"PlaySceneAssets\Treasures\Treasure2",
@@ -264,13 +204,7 @@ namespace PyramidPanic
                                                                               ((int)Input.MousePosition().Y / 32) * 32f)));
                         break;
                     case 11:
-                        this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
-                            new Block(this.levelEditorScene.Game,
-                                      @"Transparant",
-                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
-                                                  ((int)Input.MousePosition().Y / 32) * 32f),
-                                      BlockCollision.NotPassable,
-                                      'E');
+                        this.PlaceBlock(@"Transparant", 'E'); 
                         this.levelEditorScene.Level.Explorer = new Explorer(this.levelEditorScene.Game,
                                                                             new Vector2(((int)Input.MousePosition().X / 32) * 32f,
                                                                                         ((int)Input.MousePosition().Y / 32) * 32f),
@@ -280,6 +214,17 @@ namespace PyramidPanic
                 }
             }           
         }//Update
+
+        private void PlaceBlock(string name, Char charItem)
+        {
+            this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] =
+                           new Block(this.levelEditorScene.Game,
+                                     name,
+                                     new Vector2(((int)Input.MousePosition().X / 32) * 32f,
+                                                 ((int)Input.MousePosition().Y / 32) * 32f),
+                                     BlockCollision.NotPassable,
+                                     charItem);
+        }
 
         //Draw
         public void Draw(GameTime gameTime)
